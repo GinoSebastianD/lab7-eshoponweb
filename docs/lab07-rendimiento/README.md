@@ -13,6 +13,10 @@ Nuestro equipo ejecutó Apache JMeter sobre el mismo eShopOnWeb de los laborator
 
 En cada carpeta de resultados guardamos `aggregate.csv`, `registro.xml`, `entorno.json`, `verificacion.json`, `ejecucion.log` y el reporte nativo `dashboard/index.html`. Descargamos el repositorio y abrimos ese HTML localmente para visualizarlo; GitHub muestra el código del HTML, no el dashboard interactivo.
 
+## Grabación en vivo
+
+[Video sin audio: 3 min 48 s](video/Grabacion_Pruebas_Rendimiento_Sin_Audio.mp4). Nuestro equipo repitió las cargas en la interfaz de JMeter para mostrar su actividad. Guardamos las [mediciones de esta demostración](video/) por separado de las ejecuciones CLI del informe.
+
 ## Qué encontramos
 
 Nuestro equipo registró 1400 muestras con 100 usuarios y 4200 con 300. Alcanzamos picos reales de 100 y 300 hilos. El dashboard incluye dos peticiones de preparación por iteración del carrito, por lo que las muestras de los seis casos son 1000 y 3000.
