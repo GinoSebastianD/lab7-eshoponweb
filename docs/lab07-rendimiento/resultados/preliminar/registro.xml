@@ -1,0 +1,1209 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testResults version="1.2">
+<httpSample t="1086" it="0" lt="1082" ct="27" ts="1794939542448" s="false" lb="TC01 Listar productos" rc="200" rm="OK" tn="TC01 - Listar productos API 1-1" dt="text" by="1830" sby="160" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 1000 ms</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>La operación duró demasiado: tardó 1,086 milisegundos, cuando no debería haber tardado más de 1,000 milisegundos.</failureMessage>
+  </assertionResult>
+  <assertionResult>
+    <name>Contenido esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{"catalogItems":[{"id":5,"name":"Roslyn Red Sheet","description":"Roslyn Red Sheet","price":8.5,"pictureUri":"/images/products/5.png","catalogTypeId":3,"catalogBrandId":5},{"id":4,"name":".NET Foundation Sweatshirt","description":".NET Foundation Sweatshirt","price":12,"pictureUri":"/images/products/4.png","catalogTypeId":2,"catalogBrandId":2},{"id":3,"name":"Prism White T-Shirt","description":"Prism White T-Shirt","price":12,"pictureUri":"/images/products/3.png","catalogTypeId":2,"catalogBrandId":5},{"id":2,"name":".NET Black &amp; White Mug","description":".NET Black &amp; White Mug","price":8.50,"pictureUri":"/images/products/2.png","catalogTypeId":1,"catalogBrandId":2},{"id":1,"name":".NET Bot Black Sweatshirt","description":".NET Bot Black Sweatshirt","price":19.5,"pictureUri":"/images/products/1.png","catalogTypeId":2,"catalogBrandId":2},{"id":6,"name":".NET Blue Sweatshirt","description":".NET Blue Sweatshirt","price":12,"pictureUri":"/images/products/6.png","catalogTypeId":2,"catalogBrandId":2},{"id":7,"name":"Roslyn Red T-Shirt","description":"Roslyn Red T-Shirt","price":12,"pictureUri":"/images/products/7.png","catalogTypeId":2,"catalogBrandId":5},{"id":8,"name":"Kudu Purple Sweatshirt","description":"Kudu Purple Sweatshirt","price":8.5,"pictureUri":"/images/products/8.png","catalogTypeId":2,"catalogBrandId":5},{"id":9,"name":"Cup&lt;T&gt; White Mug","description":"Cup&lt;T&gt; White Mug","price":12,"pictureUri":"/images/products/9.png","catalogTypeId":1,"catalogBrandId":5},{"id":10,"name":".NET Foundation Sheet","description":".NET Foundation Sheet","price":12,"pictureUri":"/images/products/10.png","catalogTypeId":3,"catalogBrandId":2}],"pageCount":2}</responseData>
+  <cookies class="java.lang.String" />
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String" />
+  <java.net.URL>http://127.0.0.1:5198/api/catalog-items?PageSize=10&amp;PageIndex=0</java.net.URL>
+</httpSample>
+<httpSample t="42" it="0" lt="42" ct="1" ts="1794939543612" s="true" lb="TC02 Filtrar catálogo" rc="200" rm="OK" tn="TC02 - Filtrar catálogo web 2-1" dt="text" by="10654" sby="187" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 1000 ms</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Contenido esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Catalog - Microsoft.eShopOnWeb&lt;/title&gt;
+    
+        &lt;link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/header/header.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/identity/identity.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/pager/pager.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket-status/basket-status.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/catalog/catalog.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/orders/orders.component.css" /&gt;
+    
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="esh-app-wrapper"&gt;
+        &lt;header class="esh-app-header"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-lg-7 col-md-6 col-xs-12"&gt;
+                        &lt;a href="/"&gt;
+                            &lt;img src="/images/brand.png" alt="eShop On Web" /&gt;
+                        &lt;/a&gt;
+                    &lt;/section&gt;
+                        &lt;section class="col-lg-4 col-md-5 col-xs-12"&gt;
+        &lt;div class="esh-identity"&gt;
+            &lt;section class="esh-identity-section"&gt;
+                &lt;div class="esh-identity-item"&gt;
+
+                    &lt;a class="esh-identity-name esh-identity-name--upper" href="/Identity/Account/Login"&gt;
+                        Login
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="col-lg-1 col-xs-12"&gt;
+        
+
+&lt;a class="esh-basketstatus" href="/Basket"&gt;
+        &lt;div class="esh-basketstatus-image"&gt;
+            &lt;img src="/images/cart.png" /&gt;
+        &lt;/div&gt;
+        &lt;div class="esh-basketstatus-badge"&gt;
+            0
+        &lt;/div&gt;
+&lt;/a&gt;
+
+    &lt;/section&gt;
+
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;section class="esh-catalog-hero"&gt;
+    &lt;div class="container"&gt;
+        &lt;img class="esh-catalog-title" src="/images/main_banner_text.png" /&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="esh-catalog-filters"&gt;
+    &lt;div class="container"&gt;
+        &lt;form method="get"&gt;
+            &lt;label class="esh-catalog-label" data-title="brand"&gt;
+                &lt;select class="esh-catalog-filter" id="CatalogModel_BrandFilterApplied" name="CatalogModel.BrandFilterApplied"&gt;&lt;option&gt;All&lt;/option&gt;
+&lt;option selected="selected" value="2"&gt;.NET&lt;/option&gt;
+&lt;option value="1"&gt;Azure&lt;/option&gt;
+&lt;option value="5"&gt;Other&lt;/option&gt;
+&lt;option value="4"&gt;SQL Server&lt;/option&gt;
+&lt;option value="3"&gt;Visual Studio&lt;/option&gt;
+&lt;/select&gt;
+            &lt;/label&gt;
+            &lt;label class="esh-catalog-label" data-title="type"&gt;
+                &lt;select class="esh-catalog-filter" id="CatalogModel_TypesFilterApplied" name="CatalogModel.TypesFilterApplied"&gt;&lt;option&gt;All&lt;/option&gt;
+&lt;option value="1"&gt;Mug&lt;/option&gt;
+&lt;option value="3"&gt;Sheet&lt;/option&gt;
+&lt;option selected="selected" value="2"&gt;T-Shirt&lt;/option&gt;
+&lt;option value="4"&gt;USB Memory Stick&lt;/option&gt;
+&lt;/select&gt;
+            &lt;/label&gt;
+            &lt;input class="esh-catalog-send" type="image" src="/images/arrow-right.svg" /&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;div class="container"&gt;
+        &lt;div class="esh-pager"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;article class="esh-pager-wrapper row"&gt;
+            &lt;nav&gt;
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-left esh-pager-item--navigable esh-pager-item is-disabled" id="Previous" aria-label="Previous" href="/?CatalogModel.BrandFilterApplied=2&amp;amp;CatalogModel.TypesFilterApplied=2&amp;amp;pageId=-1"&gt;
+                        Previous
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-8 col-xs-12"&gt;
+                    &lt;span class="esh-pager-item"&gt;
+                        Showing 3 of 3 products - Page 1 - 1
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-right esh-pager-item--navigable esh-pager-item is-disabled" id="Next" aria-label="Next" href="/?CatalogModel.BrandFilterApplied=2&amp;amp;CatalogModel.TypesFilterApplied=2&amp;amp;pageId=1"&gt;
+                        Next
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+        &lt;div class="esh-catalog-items row"&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/4.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Foundation Sweatshirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="4" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Foundation Sweatshirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/4.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/1.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Bot Black Sweatshirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;19.50&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="1" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Bot Black Sweatshirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/1.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="19.5" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/6.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Blue Sweatshirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="6" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Blue Sweatshirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/6.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="esh-pager"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;article class="esh-pager-wrapper row"&gt;
+            &lt;nav&gt;
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-left esh-pager-item--navigable esh-pager-item is-disabled" id="Previous" aria-label="Previous" href="/?CatalogModel.BrandFilterApplied=2&amp;amp;CatalogModel.TypesFilterApplied=2&amp;amp;pageId=-1"&gt;
+                        Previous
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-8 col-xs-12"&gt;
+                    &lt;span class="esh-pager-item"&gt;
+                        Showing 3 of 3 products - Page 1 - 1
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-right esh-pager-item--navigable esh-pager-item is-disabled" id="Next" aria-label="Next" href="/?CatalogModel.BrandFilterApplied=2&amp;amp;CatalogModel.TypesFilterApplied=2&amp;amp;pageId=1"&gt;
+                        Next
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+        &lt;footer class="esh-app-footer footer"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-sm-6"&gt;&lt;/section&gt;
+                    &lt;section class="col-sm-6"&gt;
+                        &lt;div class="esh-app-footer-text hidden-xs"&gt; e-ShopOnWeb. All rights reserved &lt;/div&gt;
+                    &lt;/section&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+    
+        &lt;script src="/lib/jquery/jquery.js"&gt;&lt;/script&gt;
+        &lt;script src="/lib/bootstrap/dist/js/bootstrap.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"&gt;&lt;/script&gt;
+    
+    
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <cookies class="java.lang.String" />
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String" />
+  <java.net.URL>http://127.0.0.1:5197/?CatalogModel.BrandFilterApplied=2&amp;CatalogModel.TypesFilterApplied=2</java.net.URL>
+</httpSample>
+<httpSample t="29" it="0" lt="29" ct="24" ts="1794939543721" s="true" lb="TC03 Crear producto" rc="201" rm="Created" tn="TC03 - Crear producto API 3-1" dt="text" by="445" sby="745" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 3000 ms</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Contenido esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{"catalogItem":{"id":15,"name":"Lab07-CREATE-d3ef9fdc-8363-4a10-8f22-a5a7ee6d4750","description":"Producto temporal de nuestro equipo","price":25.50,"pictureUri":"images\\products\\eCatalog-item-default.png?0","catalogTypeId":2,"catalogBrandId":1}}</responseData>
+  <cookies class="java.lang.String" />
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{"name":"Lab07-CREATE-d3ef9fdc-8363-4a10-8f22-a5a7ee6d4750","description":"Producto temporal de nuestro equipo","price":25.50,"catalogBrandId":1,"catalogTypeId":2,"pictureUri":"eCatalog-item-default.png","pictureBase64":"","pictureName":""}</queryString>
+  <java.net.URL>http://127.0.0.1:5198/api/catalog-items</java.net.URL>
+</httpSample>
+<httpSample t="25" it="0" lt="25" ct="1" ts="1794939543828" s="true" lb="TC04 Editar producto" rc="200" rm="OK" tn="TC04 - Editar producto API 4-1" dt="text" by="392" sby="737" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 3000 ms</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Contenido esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Validación de negocio</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{"catalogItem":{"id":13,"name":"Lab07-edit-6f23fe4181f3411f8dd2dcffed91b2e4","description":"Editado por nuestro equipo","price":35.50,"pictureUri":"images\\products\\eCatalog-item-default.png?0","catalogTypeId":2,"catalogBrandId":1}}</responseData>
+  <cookies class="java.lang.String" />
+  <method class="java.lang.String">PUT</method>
+  <queryString class="java.lang.String">{"id":13,"name":"Lab07-edit-6f23fe4181f3411f8dd2dcffed91b2e4","description":"Editado por nuestro equipo","price":35.50,"catalogBrandId":1,"catalogTypeId":2,"pictureUri":"eCatalog-item-default.png","pictureBase64":"","pictureName":""}</queryString>
+  <java.net.URL>http://127.0.0.1:5198/api/catalog-items</java.net.URL>
+</httpSample>
+<httpSample t="18" it="0" lt="0" ct="1" ts="1794939544732" s="true" lb="TC05 Eliminar producto" rc="204" rm="No Content" tn="TC05 - Eliminar producto API 5-1" dt="" by="81" sby="540" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 3000 ms</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <cookies class="java.lang.String" />
+  <method class="java.lang.String">DELETE</method>
+  <queryString class="java.lang.String" />
+  <java.net.URL>http://127.0.0.1:5198/api/catalog-items/14</java.net.URL>
+</httpSample>
+<httpSample t="50" it="0" lt="50" ct="1" ts="1794939544809" s="true" lb="PREP Carrito - token" rc="200" rm="OK" tn="TC06 - Actualizar carrito web 6-1" dt="text" by="18711" sby="119" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 3000 ms</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Contenido esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Catalog - Microsoft.eShopOnWeb&lt;/title&gt;
+    
+        &lt;link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/header/header.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/identity/identity.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/pager/pager.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket-status/basket-status.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/catalog/catalog.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/orders/orders.component.css" /&gt;
+    
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="esh-app-wrapper"&gt;
+        &lt;header class="esh-app-header"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-lg-7 col-md-6 col-xs-12"&gt;
+                        &lt;a href="/"&gt;
+                            &lt;img src="/images/brand.png" alt="eShop On Web" /&gt;
+                        &lt;/a&gt;
+                    &lt;/section&gt;
+                        &lt;section class="col-lg-4 col-md-5 col-xs-12"&gt;
+        &lt;div class="esh-identity"&gt;
+            &lt;section class="esh-identity-section"&gt;
+                &lt;div class="esh-identity-item"&gt;
+
+                    &lt;a class="esh-identity-name esh-identity-name--upper" href="/Identity/Account/Login"&gt;
+                        Login
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="col-lg-1 col-xs-12"&gt;
+        
+
+&lt;a class="esh-basketstatus" href="/Basket"&gt;
+        &lt;div class="esh-basketstatus-image"&gt;
+            &lt;img src="/images/cart.png" /&gt;
+        &lt;/div&gt;
+        &lt;div class="esh-basketstatus-badge"&gt;
+            0
+        &lt;/div&gt;
+&lt;/a&gt;
+
+    &lt;/section&gt;
+
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;section class="esh-catalog-hero"&gt;
+    &lt;div class="container"&gt;
+        &lt;img class="esh-catalog-title" src="/images/main_banner_text.png" /&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="esh-catalog-filters"&gt;
+    &lt;div class="container"&gt;
+        &lt;form method="get"&gt;
+            &lt;label class="esh-catalog-label" data-title="brand"&gt;
+                &lt;select class="esh-catalog-filter" id="CatalogModel_BrandFilterApplied" name="CatalogModel.BrandFilterApplied"&gt;&lt;option&gt;All&lt;/option&gt;
+&lt;option value="2"&gt;.NET&lt;/option&gt;
+&lt;option value="1"&gt;Azure&lt;/option&gt;
+&lt;option value="5"&gt;Other&lt;/option&gt;
+&lt;option value="4"&gt;SQL Server&lt;/option&gt;
+&lt;option value="3"&gt;Visual Studio&lt;/option&gt;
+&lt;/select&gt;
+            &lt;/label&gt;
+            &lt;label class="esh-catalog-label" data-title="type"&gt;
+                &lt;select class="esh-catalog-filter" id="CatalogModel_TypesFilterApplied" name="CatalogModel.TypesFilterApplied"&gt;&lt;option&gt;All&lt;/option&gt;
+&lt;option value="1"&gt;Mug&lt;/option&gt;
+&lt;option value="3"&gt;Sheet&lt;/option&gt;
+&lt;option value="2"&gt;T-Shirt&lt;/option&gt;
+&lt;option value="4"&gt;USB Memory Stick&lt;/option&gt;
+&lt;/select&gt;
+            &lt;/label&gt;
+            &lt;input class="esh-catalog-send" type="image" src="/images/arrow-right.svg" /&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;div class="container"&gt;
+        &lt;div class="esh-pager"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;article class="esh-pager-wrapper row"&gt;
+            &lt;nav&gt;
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-left esh-pager-item--navigable esh-pager-item is-disabled" id="Previous" aria-label="Previous" href="/?pageId=-1"&gt;
+                        Previous
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-8 col-xs-12"&gt;
+                    &lt;span class="esh-pager-item"&gt;
+                        Showing 10 of 12 products - Page 1 - 2
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-right esh-pager-item--navigable esh-pager-item " id="Next" aria-label="Next" href="/?pageId=1"&gt;
+                        Next
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+        &lt;div class="esh-catalog-items row"&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/5.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;Roslyn Red Sheet&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;8.50&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="5" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value="Roslyn Red Sheet" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/5.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="8.5" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/4.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Foundation Sweatshirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="4" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Foundation Sweatshirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/4.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/3.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;Prism White T-Shirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="3" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value="Prism White T-Shirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/3.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/2.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Black &amp;amp; White Mug&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;8.50&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="2" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Black &amp;amp; White Mug" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/2.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="8.50" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/1.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Bot Black Sweatshirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;19.50&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="1" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Bot Black Sweatshirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/1.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="19.5" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/6.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Blue Sweatshirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="6" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Blue Sweatshirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/6.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/7.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;Roslyn Red T-Shirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="7" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value="Roslyn Red T-Shirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/7.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/8.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;Kudu Purple Sweatshirt&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;8.50&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="8" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value="Kudu Purple Sweatshirt" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/8.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="8.5" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/9.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;Cup&amp;lt;T&amp;gt; White Mug&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="9" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value="Cup&amp;lt;T&amp;gt; White Mug" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/9.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+                &lt;div class="esh-catalog-item col-md-4"&gt;
+                    
+&lt;form method="post" action="/Basket"&gt;
+    &lt;img class="esh-catalog-thumbnail" src="/images/products/10.png" /&gt;
+    &lt;input class="esh-catalog-button" type="submit" value="[ ADD TO BASKET ]" /&gt;
+    &lt;div class="esh-catalog-name"&gt;
+        &lt;span&gt;.NET Foundation Sheet&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="esh-catalog-price"&gt;
+        &lt;span&gt;12.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="hidden" name="id" data-val="true" data-val-required="The Id field is required." id="catalogItem_Id" value="10" /&gt;
+    &lt;input type="hidden" name="name" id="catalogItem_Name" value=".NET Foundation Sheet" /&gt;
+    &lt;input type="hidden" name="pictureUri" id="catalogItem_PictureUri" value="/images/products/10.png" /&gt;
+    &lt;input type="hidden" name="price" data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="catalogItem_Price" value="12" /&gt;
+&lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+
+                &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="esh-pager"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;article class="esh-pager-wrapper row"&gt;
+            &lt;nav&gt;
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-left esh-pager-item--navigable esh-pager-item is-disabled" id="Previous" aria-label="Previous" href="/?pageId=-1"&gt;
+                        Previous
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-8 col-xs-12"&gt;
+                    &lt;span class="esh-pager-item"&gt;
+                        Showing 10 of 12 products - Page 1 - 2
+                    &lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class="col-md-2 col-xs-12"&gt;
+                    &lt;a class="esh-pager-item-right esh-pager-item--navigable esh-pager-item " id="Next" aria-label="Next" href="/?pageId=1"&gt;
+                        Next
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+        &lt;footer class="esh-app-footer footer"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-sm-6"&gt;&lt;/section&gt;
+                    &lt;section class="col-sm-6"&gt;
+                        &lt;div class="esh-app-footer-text hidden-xs"&gt; e-ShopOnWeb. All rights reserved &lt;/div&gt;
+                    &lt;/section&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+    
+        &lt;script src="/lib/jquery/jquery.js"&gt;&lt;/script&gt;
+        &lt;script src="/lib/bootstrap/dist/js/bootstrap.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"&gt;&lt;/script&gt;
+    
+    
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <cookies class="java.lang.String" />
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String" />
+  <java.net.URL>http://127.0.0.1:5197/</java.net.URL>
+</httpSample>
+<httpSample t="179" it="0" lt="125" ct="0" ts="1794939544917" s="true" lb="PREP Carrito - añadir" rc="200" rm="OK" tn="TC06 - Actualizar carrito web 6-1" dt="text" by="7328" sby="969" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 3000 ms</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Contenido esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="125" it="0" lt="125" ct="0" ts="1794939544917" s="true" lb="PREP Carrito - añadir-0" rc="302" rm="Found" tn="TC06 - Actualizar carrito web 6-1" dt="" by="344" sby="599" ng="1" na="1">
+    <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+    <cookies class="java.lang.String">[COOKIES_OMITIDAS]</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">id=1&amp;__RequestVerificationToken=[TOKEN_OMITIDO]</queryString>
+    <redirectLocation class="java.lang.String">/Basket</redirectLocation>
+    <java.net.URL>http://127.0.0.1:5197/Basket</java.net.URL>
+  </httpSample>
+  <httpSample t="51" it="0" lt="51" ct="0" ts="1794939545045" s="true" lb="PREP Carrito - añadir-1" rc="200" rm="OK" tn="TC06 - Actualizar carrito web 6-1" dt="text" by="6984" sby="370" ng="1" na="1">
+    <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Basket - Microsoft.eShopOnWeb&lt;/title&gt;
+    
+        &lt;link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/header/header.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/identity/identity.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/pager/pager.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket-status/basket-status.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/catalog/catalog.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/orders/orders.component.css" /&gt;
+    
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="esh-app-wrapper"&gt;
+        &lt;header class="esh-app-header"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-lg-7 col-md-6 col-xs-12"&gt;
+                        &lt;a href="/"&gt;
+                            &lt;img src="/images/brand.png" alt="eShop On Web" /&gt;
+                        &lt;/a&gt;
+                    &lt;/section&gt;
+                        &lt;section class="col-lg-4 col-md-5 col-xs-12"&gt;
+        &lt;div class="esh-identity"&gt;
+            &lt;section class="esh-identity-section"&gt;
+                &lt;div class="esh-identity-item"&gt;
+
+                    &lt;a class="esh-identity-name esh-identity-name--upper" href="/Identity/Account/Login"&gt;
+                        Login
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="col-lg-1 col-xs-12"&gt;
+        
+
+&lt;a class="esh-basketstatus" href="/Basket"&gt;
+        &lt;div class="esh-basketstatus-image"&gt;
+            &lt;img src="/images/cart.png" /&gt;
+        &lt;/div&gt;
+        &lt;div class="esh-basketstatus-badge"&gt;
+            1
+        &lt;/div&gt;
+&lt;/a&gt;
+
+    &lt;/section&gt;
+
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;section class="esh-catalog-hero"&gt;
+    &lt;div class="container"&gt;
+        &lt;img class="esh-catalog-title" src="/images/main_banner_text.png" /&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;div class="container"&gt;
+
+        &lt;form method="post"&gt;
+            &lt;article class="esh-basket-titles row"&gt;
+                &lt;br /&gt;
+                &lt;section class="esh-basket-title col-xs-3"&gt;Product&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-3 hidden-lg-down"&gt;&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Price&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Quantity&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Cost&lt;/section&gt;
+            &lt;/article&gt;
+            &lt;div class="esh-catalog-items row"&gt;
+                &lt;div class="text-danger validation-summary-valid" data-valmsg-summary="true"&gt;&lt;ul&gt;&lt;li style="display:none"&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;div&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-lg-3 hidden-lg-down"&gt;
+                                &lt;img class="esh-basket-image" src="/images/products/1.png" /&gt;
+                            &lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-3"&gt;.NET Bot Black Sweatshirt&lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-2"&gt;$ 19.50&lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-2"&gt;
+                                &lt;input type="hidden" name="Items[0].Id" value="1" /&gt;
+                                &lt;input type="number" class="esh-basket-input" min="0" name="Items[0].Quantity" value="1" /&gt;
+                            &lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle esh-basket-item--mark col-xs-2"&gt;$ 19.50&lt;/section&gt;
+                        &lt;/div&gt;
+                        &lt;div class="row"&gt;
+
+                        &lt;/div&gt;
+                    &lt;/article&gt;
+
+                &lt;div class="container"&gt;
+                    &lt;article class="esh-basket-titles esh-basket-titles--clean row"&gt;
+                        &lt;section class="esh-basket-title col-xs-10"&gt;&lt;/section&gt;
+                        &lt;section class="esh-basket-title col-xs-2"&gt;Total&lt;/section&gt;
+                    &lt;/article&gt;
+
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;section class="esh-basket-item col-xs-10"&gt;&lt;/section&gt;
+                        &lt;section class="esh-basket-item esh-basket-item--mark col-xs-2"&gt;$ 19.50&lt;/section&gt;
+                    &lt;/article&gt;
+
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;section class="esh-basket-item col-xs-7"&gt;&lt;/section&gt;
+                    &lt;/article&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                    &lt;section class="esh-basket-item col-xs-1"&gt;
+                        &lt;a class="btn esh-basket-checkout text-white" href="/"&gt;[ Continue Shopping ]&lt;/a&gt;
+                    &lt;/section&gt;
+                    &lt;section class="esh-basket-item col-xs-push-7 col-xs-4"&gt;
+
+                        &lt;button class="btn esh-basket-checkout" name="updatebutton" value="" type="submit" formaction="/Basket/Update"&gt;
+                            [ Update ]
+                        &lt;/button&gt;
+                        &lt;a class="btn esh-basket-checkout" href="/Basket/Checkout"&gt;[ Checkout ]&lt;/a&gt;
+                    &lt;/section&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+&lt;/div&gt;
+
+        &lt;footer class="esh-app-footer footer"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-sm-6"&gt;&lt;/section&gt;
+                    &lt;section class="col-sm-6"&gt;
+                        &lt;div class="esh-app-footer-text hidden-xs"&gt; e-ShopOnWeb. All rights reserved &lt;/div&gt;
+                    &lt;/section&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+    
+        &lt;script src="/lib/jquery/jquery.js"&gt;&lt;/script&gt;
+        &lt;script src="/lib/bootstrap/dist/js/bootstrap.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"&gt;&lt;/script&gt;
+    
+    
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+    <cookies class="java.lang.String">[COOKIES_OMITIDAS]</cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String" />
+    <java.net.URL>http://127.0.0.1:5197/Basket</java.net.URL>
+  </httpSample>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Basket - Microsoft.eShopOnWeb&lt;/title&gt;
+    
+        &lt;link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/header/header.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/identity/identity.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/pager/pager.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket-status/basket-status.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/catalog/catalog.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/orders/orders.component.css" /&gt;
+    
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="esh-app-wrapper"&gt;
+        &lt;header class="esh-app-header"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-lg-7 col-md-6 col-xs-12"&gt;
+                        &lt;a href="/"&gt;
+                            &lt;img src="/images/brand.png" alt="eShop On Web" /&gt;
+                        &lt;/a&gt;
+                    &lt;/section&gt;
+                        &lt;section class="col-lg-4 col-md-5 col-xs-12"&gt;
+        &lt;div class="esh-identity"&gt;
+            &lt;section class="esh-identity-section"&gt;
+                &lt;div class="esh-identity-item"&gt;
+
+                    &lt;a class="esh-identity-name esh-identity-name--upper" href="/Identity/Account/Login"&gt;
+                        Login
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="col-lg-1 col-xs-12"&gt;
+        
+
+&lt;a class="esh-basketstatus" href="/Basket"&gt;
+        &lt;div class="esh-basketstatus-image"&gt;
+            &lt;img src="/images/cart.png" /&gt;
+        &lt;/div&gt;
+        &lt;div class="esh-basketstatus-badge"&gt;
+            1
+        &lt;/div&gt;
+&lt;/a&gt;
+
+    &lt;/section&gt;
+
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;section class="esh-catalog-hero"&gt;
+    &lt;div class="container"&gt;
+        &lt;img class="esh-catalog-title" src="/images/main_banner_text.png" /&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;div class="container"&gt;
+
+        &lt;form method="post"&gt;
+            &lt;article class="esh-basket-titles row"&gt;
+                &lt;br /&gt;
+                &lt;section class="esh-basket-title col-xs-3"&gt;Product&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-3 hidden-lg-down"&gt;&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Price&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Quantity&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Cost&lt;/section&gt;
+            &lt;/article&gt;
+            &lt;div class="esh-catalog-items row"&gt;
+                &lt;div class="text-danger validation-summary-valid" data-valmsg-summary="true"&gt;&lt;ul&gt;&lt;li style="display:none"&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;div&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-lg-3 hidden-lg-down"&gt;
+                                &lt;img class="esh-basket-image" src="/images/products/1.png" /&gt;
+                            &lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-3"&gt;.NET Bot Black Sweatshirt&lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-2"&gt;$ 19.50&lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-2"&gt;
+                                &lt;input type="hidden" name="Items[0].Id" value="1" /&gt;
+                                &lt;input type="number" class="esh-basket-input" min="0" name="Items[0].Quantity" value="1" /&gt;
+                            &lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle esh-basket-item--mark col-xs-2"&gt;$ 19.50&lt;/section&gt;
+                        &lt;/div&gt;
+                        &lt;div class="row"&gt;
+
+                        &lt;/div&gt;
+                    &lt;/article&gt;
+
+                &lt;div class="container"&gt;
+                    &lt;article class="esh-basket-titles esh-basket-titles--clean row"&gt;
+                        &lt;section class="esh-basket-title col-xs-10"&gt;&lt;/section&gt;
+                        &lt;section class="esh-basket-title col-xs-2"&gt;Total&lt;/section&gt;
+                    &lt;/article&gt;
+
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;section class="esh-basket-item col-xs-10"&gt;&lt;/section&gt;
+                        &lt;section class="esh-basket-item esh-basket-item--mark col-xs-2"&gt;$ 19.50&lt;/section&gt;
+                    &lt;/article&gt;
+
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;section class="esh-basket-item col-xs-7"&gt;&lt;/section&gt;
+                    &lt;/article&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                    &lt;section class="esh-basket-item col-xs-1"&gt;
+                        &lt;a class="btn esh-basket-checkout text-white" href="/"&gt;[ Continue Shopping ]&lt;/a&gt;
+                    &lt;/section&gt;
+                    &lt;section class="esh-basket-item col-xs-push-7 col-xs-4"&gt;
+
+                        &lt;button class="btn esh-basket-checkout" name="updatebutton" value="" type="submit" formaction="/Basket/Update"&gt;
+                            [ Update ]
+                        &lt;/button&gt;
+                        &lt;a class="btn esh-basket-checkout" href="/Basket/Checkout"&gt;[ Checkout ]&lt;/a&gt;
+                    &lt;/section&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+&lt;/div&gt;
+
+        &lt;footer class="esh-app-footer footer"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-sm-6"&gt;&lt;/section&gt;
+                    &lt;section class="col-sm-6"&gt;
+                        &lt;div class="esh-app-footer-text hidden-xs"&gt; e-ShopOnWeb. All rights reserved &lt;/div&gt;
+                    &lt;/section&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+    
+        &lt;script src="/lib/jquery/jquery.js"&gt;&lt;/script&gt;
+        &lt;script src="/lib/bootstrap/dist/js/bootstrap.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"&gt;&lt;/script&gt;
+    
+    
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <cookies class="java.lang.String">[COOKIES_OMITIDAS]</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String" />
+  <redirectLocation class="java.lang.String">/Basket</redirectLocation>
+  <java.net.URL>http://127.0.0.1:5197/Basket</java.net.URL>
+</httpSample>
+<httpSample t="25" it="0" lt="25" ct="0" ts="1794939545151" s="true" lb="TC06 Actualizar carrito" rc="200" rm="OK" tn="TC06 - Actualizar carrito web 6-1" dt="text" by="6984" sby="687" ng="1" na="1">
+  <assertionResult>
+    <name>Código HTTP esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Tiempo máximo 3000 ms</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Contenido esperado</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Basket - Microsoft.eShopOnWeb&lt;/title&gt;
+    
+        &lt;link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/app.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/header/header.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/identity/identity.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/shared/components/pager/pager.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/basket/basket-status/basket-status.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/catalog/catalog.component.css" /&gt;
+        &lt;link rel="stylesheet" href="/css/orders/orders.component.css" /&gt;
+    
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="esh-app-wrapper"&gt;
+        &lt;header class="esh-app-header"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-lg-7 col-md-6 col-xs-12"&gt;
+                        &lt;a href="/"&gt;
+                            &lt;img src="/images/brand.png" alt="eShop On Web" /&gt;
+                        &lt;/a&gt;
+                    &lt;/section&gt;
+                        &lt;section class="col-lg-4 col-md-5 col-xs-12"&gt;
+        &lt;div class="esh-identity"&gt;
+            &lt;section class="esh-identity-section"&gt;
+                &lt;div class="esh-identity-item"&gt;
+
+                    &lt;a class="esh-identity-name esh-identity-name--upper" href="/Identity/Account/Login"&gt;
+                        Login
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="col-lg-1 col-xs-12"&gt;
+        
+
+&lt;a class="esh-basketstatus" href="/Basket"&gt;
+        &lt;div class="esh-basketstatus-image"&gt;
+            &lt;img src="/images/cart.png" /&gt;
+        &lt;/div&gt;
+        &lt;div class="esh-basketstatus-badge"&gt;
+            3
+        &lt;/div&gt;
+&lt;/a&gt;
+
+    &lt;/section&gt;
+
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;section class="esh-catalog-hero"&gt;
+    &lt;div class="container"&gt;
+        &lt;img class="esh-catalog-title" src="/images/main_banner_text.png" /&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;div class="container"&gt;
+
+        &lt;form method="post"&gt;
+            &lt;article class="esh-basket-titles row"&gt;
+                &lt;br /&gt;
+                &lt;section class="esh-basket-title col-xs-3"&gt;Product&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-3 hidden-lg-down"&gt;&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Price&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Quantity&lt;/section&gt;
+                &lt;section class="esh-basket-title col-xs-2"&gt;Cost&lt;/section&gt;
+            &lt;/article&gt;
+            &lt;div class="esh-catalog-items row"&gt;
+                &lt;div class="text-danger validation-summary-valid" data-valmsg-summary="true"&gt;&lt;ul&gt;&lt;li style="display:none"&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;div&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-lg-3 hidden-lg-down"&gt;
+                                &lt;img class="esh-basket-image" src="/images/products/1.png" /&gt;
+                            &lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-3"&gt;.NET Bot Black Sweatshirt&lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-2"&gt;$ 19.50&lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle col-xs-2"&gt;
+                                &lt;input type="hidden" name="Items[0].Id" value="1" /&gt;
+                                &lt;input type="number" class="esh-basket-input" min="0" name="Items[0].Quantity" value="3" /&gt;
+                            &lt;/section&gt;
+                            &lt;section class="esh-basket-item esh-basket-item--middle esh-basket-item--mark col-xs-2"&gt;$ 58.50&lt;/section&gt;
+                        &lt;/div&gt;
+                        &lt;div class="row"&gt;
+
+                        &lt;/div&gt;
+                    &lt;/article&gt;
+
+                &lt;div class="container"&gt;
+                    &lt;article class="esh-basket-titles esh-basket-titles--clean row"&gt;
+                        &lt;section class="esh-basket-title col-xs-10"&gt;&lt;/section&gt;
+                        &lt;section class="esh-basket-title col-xs-2"&gt;Total&lt;/section&gt;
+                    &lt;/article&gt;
+
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;section class="esh-basket-item col-xs-10"&gt;&lt;/section&gt;
+                        &lt;section class="esh-basket-item esh-basket-item--mark col-xs-2"&gt;$ 58.50&lt;/section&gt;
+                    &lt;/article&gt;
+
+                    &lt;article class="esh-basket-items row"&gt;
+                        &lt;section class="esh-basket-item col-xs-7"&gt;&lt;/section&gt;
+                    &lt;/article&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                    &lt;section class="esh-basket-item col-xs-1"&gt;
+                        &lt;a class="btn esh-basket-checkout text-white" href="/"&gt;[ Continue Shopping ]&lt;/a&gt;
+                    &lt;/section&gt;
+                    &lt;section class="esh-basket-item col-xs-push-7 col-xs-4"&gt;
+
+                        &lt;button class="btn esh-basket-checkout" name="updatebutton" value="" type="submit" formaction="/Basket/Update"&gt;
+                            [ Update ]
+                        &lt;/button&gt;
+                        &lt;a class="btn esh-basket-checkout" href="/Basket/Checkout"&gt;[ Checkout ]&lt;/a&gt;
+                    &lt;/section&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;input name="__RequestVerificationToken" type="hidden" value="[TOKEN_OMITIDO]" /&gt;&lt;/form&gt;
+&lt;/div&gt;
+
+        &lt;footer class="esh-app-footer footer"&gt;
+            &lt;div class="container"&gt;
+                &lt;article class="row"&gt;
+                    &lt;section class="col-sm-6"&gt;&lt;/section&gt;
+                    &lt;section class="col-sm-6"&gt;
+                        &lt;div class="esh-app-footer-text hidden-xs"&gt; e-ShopOnWeb. All rights reserved &lt;/div&gt;
+                    &lt;/section&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+    
+        &lt;script src="/lib/jquery/jquery.js"&gt;&lt;/script&gt;
+        &lt;script src="/lib/bootstrap/dist/js/bootstrap.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"&gt;&lt;/script&gt;
+    
+    
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</responseData>
+  <cookies class="java.lang.String">[COOKIES_OMITIDAS]</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">Items%5B0%5D.Id=1&amp;Items%5B0%5D.Quantity=3&amp;__RequestVerificationToken=[TOKEN_OMITIDO]</queryString>
+  <java.net.URL>http://127.0.0.1:5197/Basket/Update</java.net.URL>
+</httpSample>
+
+</testResults>

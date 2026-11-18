@@ -1,0 +1,26 @@
+{
+  "phase": "assert1ms",
+  "startUtc": "2026-11-17T21:47:14.390084+00:00",
+  "endUtc": "2026-11-17T21:47:21.560376+00:00",
+  "threads": {
+    "list": 1,
+    "filter": 0,
+    "create": 0,
+    "edit": 0,
+    "delete": 0,
+    "basket": 0
+  },
+  "loops": 1,
+  "rampSeconds": 1,
+  "thinkMs": 50,
+  "durationAssertionListMs": 1,
+  "exitCode": 0,
+  "os": "Windows-11-10.0.26300-SP0",
+  "logicalProcessors": 16,
+  "jmeter": "5.6.3",
+  "sourceCommit": "193ad11",
+  "database": "InMemory: almacenes separados para Web y API",
+  "configuration": "Debug / Development",
+  "authentication": "ProductManager demo, token obtenido antes de la carga",
+  "scope": "HTTP local; sin recursos estáticos ni renderizado de navegador; seis funciones seleccionadas"
+}

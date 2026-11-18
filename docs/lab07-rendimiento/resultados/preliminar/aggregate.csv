@@ -1,0 +1,9 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794939542448,1086,TC01 Listar productos,200,OK,TC01 - Listar productos API 1-1,text,false,"La operación duró demasiado: tardó 1,086 milisegundos, cuando no debería haber tardado más de 1,000 milisegundos.",1830,160,1,1,http://127.0.0.1:5198/api/catalog-items?PageSize=10&PageIndex=0,1082,0,27
+1794939543612,42,TC02 Filtrar catálogo,200,OK,TC02 - Filtrar catálogo web 2-1,text,true,,10654,187,1,1,http://127.0.0.1:5197/?CatalogModel.BrandFilterApplied=2&CatalogModel.TypesFilterApplied=2,42,0,1
+1794939543721,29,TC03 Crear producto,201,Created,TC03 - Crear producto API 3-1,text,true,,445,745,1,1,http://127.0.0.1:5198/api/catalog-items,29,0,24
+1794939543828,25,TC04 Editar producto,200,OK,TC04 - Editar producto API 4-1,text,true,,392,737,1,1,http://127.0.0.1:5198/api/catalog-items,25,0,1
+1794939544732,18,TC05 Eliminar producto,204,No Content,TC05 - Eliminar producto API 5-1,,true,,81,540,1,1,http://127.0.0.1:5198/api/catalog-items/14,0,0,1
+1794939544809,50,PREP Carrito - token,200,OK,TC06 - Actualizar carrito web 6-1,text,true,,18711,119,1,1,http://127.0.0.1:5197/,50,0,1
+1794939544917,179,PREP Carrito - añadir,200,OK,TC06 - Actualizar carrito web 6-1,text,true,,7328,969,1,1,http://127.0.0.1:5197/Basket,125,0,0
+1794939545151,25,TC06 Actualizar carrito,200,OK,TC06 - Actualizar carrito web 6-1,text,true,,6984,687,1,1,http://127.0.0.1:5197/Basket/Update,25,0,0

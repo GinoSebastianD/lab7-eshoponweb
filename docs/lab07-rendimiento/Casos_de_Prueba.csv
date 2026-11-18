@@ -1,0 +1,7 @@
+﻿TC,Funcionalidad,Método,URL,% usuarios,Usuarios carga100,Usuarios carga300,Rampa (s),Máximo (ms),Validación
+TC01,Listar productos,GET,API /api/catalog-items?PageSize=10&PageIndex=0,10,10,30,10,1000,HTTP 200 y catalogItems
+TC02,Filtrar catálogo,GET,WEB /?CatalogModel.BrandFilterApplied=2&CatalogModel.TypesFilterApplied=2,20,20,60,10,1000,HTTP 200 y productos visibles
+TC03,Crear producto,POST,API /api/catalog-items,20,20,60,10,3000,HTTP 201 y catalogItem; nombre único
+TC04,Editar producto,PUT,API /api/catalog-items,20,20,60,10,3000,HTTP 200; ID esperado y precio 35.50
+TC05,Eliminar producto,DELETE,API /api/catalog-items/{id},10,10,30,10,3000,HTTP 204; ausencia comprobada al finalizar
+TC06,Actualizar carrito,POST,WEB /Basket/Update,20,20,60,10,3000,HTTP 200; cantidad 3; cookie y token por usuario

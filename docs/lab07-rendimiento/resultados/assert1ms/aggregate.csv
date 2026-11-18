@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794952036998,1129,TC01 Listar productos,200,OK,TC01 - Listar productos API 1-1,text,false,"La operación duró demasiado: tardó 1,129 milisegundos, cuando no debería haber tardado más de 1 milisegundos.",1830,160,1,1,http://127.0.0.1:5198/api/catalog-items?PageSize=10&PageIndex=0,1114,0,32

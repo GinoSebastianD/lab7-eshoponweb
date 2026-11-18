@@ -1,0 +1,577 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Nuestro equipo - Lab07 eShopOnWeb" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments" />
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TC01 - Listar productos API" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(listUsers,10)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,10)}</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${__P(loops,10)}</stringProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Pausa de usuario" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__P(think,1000)}</stringProp>
+        </ConstantTimer>
+        <hashTree />
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC01 Listar productos" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments" />
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5198</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/api/catalog-items?PageSize=10&amp;PageIndex=0</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">200</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo ${__P(listLimit,1000)} ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">${__P(listLimit,1000)}</stringProp>
+          </DurationAssertion>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Contenido esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">catalogItems</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TC02 - Filtrar catálogo web" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(filterUsers,20)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,10)}</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${__P(loops,10)}</stringProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Pausa de usuario" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__P(think,1000)}</stringProp>
+        </ConstantTimer>
+        <hashTree />
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC02 Filtrar catálogo" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments" />
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5197</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/?CatalogModel.BrandFilterApplied=2&amp;CatalogModel.TypesFilterApplied=2</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">200</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo 1000 ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">1000</stringProp>
+          </DurationAssertion>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Contenido esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">esh-catalog-name</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TC03 - Crear producto API" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(createUsers,20)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,10)}</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${__P(loops,10)}</stringProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Pausa de usuario" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__P(think,1000)}</stringProp>
+        </ConstantTimer>
+        <hashTree />
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC03 Crear producto" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name" />
+                <stringProp name="Argument.value">{"name":"Lab07-CREATE-${__UUID}","description":"Producto temporal de nuestro equipo","price":25.50,"catalogBrandId":1,"catalogTypeId":2,"pictureUri":"eCatalog-item-default.png","pictureBase64":"","pictureName":""}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5198</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/api/catalog-items</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Cabeceras API" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__P(token)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">201</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo 3000 ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Contenido esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">catalogItem</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TC04 - Editar producto API" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(editUsers,20)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,10)}</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${__P(loops,10)}</stringProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Pausa de usuario" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__P(think,1000)}</stringProp>
+        </ConstantTimer>
+        <hashTree />
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Datos aislados edit" enabled="true">
+          <stringProp name="filename">${__P(dataDir)}/edit.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">itemId,itemName</stringProp>
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <boolProp name="stopThread">true</boolProp>
+        </CSVDataSet>
+        <hashTree />
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC04 Editar producto" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name" />
+                <stringProp name="Argument.value">{"id":${itemId},"name":"${itemName}","description":"Editado por nuestro equipo","price":35.50,"catalogBrandId":1,"catalogTypeId":2,"pictureUri":"eCatalog-item-default.png","pictureBase64":"","pictureName":""}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5198</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/api/catalog-items</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Cabeceras API" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__P(token)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">200</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo 3000 ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Contenido esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">catalogItem</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="Validación de negocio" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def d = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString()); if (d.catalogItem.price != 35.50 || d.catalogItem.id.toString() != vars.get('itemId')) { AssertionResult.setFailure(true); AssertionResult.setFailureMessage('Precio o ID no actualizado'); }</stringProp>
+          </JSR223Assertion>
+          <hashTree />
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TC05 - Eliminar producto API" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(deleteUsers,10)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,10)}</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${__P(loops,10)}</stringProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Pausa de usuario" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__P(think,1000)}</stringProp>
+        </ConstantTimer>
+        <hashTree />
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Datos aislados delete" enabled="true">
+          <stringProp name="filename">${__P(dataDir)}/delete.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">itemId,itemName</stringProp>
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <boolProp name="stopThread">true</boolProp>
+        </CSVDataSet>
+        <hashTree />
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC05 Eliminar producto" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments" />
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5198</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/api/catalog-items/${itemId}</stringProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Cabeceras API" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__P(token)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">204</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo 3000 ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree />
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TC06 - Actualizar carrito web" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(basketUsers,20)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(ramp,10)}</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${__P(loops,10)}</stringProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Pausa de usuario" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__P(think,1000)}</stringProp>
+        </ConstantTimer>
+        <hashTree />
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Sesión independiente por usuario" enabled="true">
+          <collectionProp name="CookieManager.cookies" />
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        </CookieManager>
+        <hashTree />
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PREP Carrito - token" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments" />
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5197</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">200</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo 3000 ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Contenido esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">__RequestVerificationToken</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extraer csrf" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">csrf</stringProp>
+            <stringProp name="RegexExtractor.regex">name="__RequestVerificationToken" type="hidden" value="([^"]+)"</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NO_ENCONTRADO</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+          </RegexExtractor>
+          <hashTree />
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PREP Carrito - añadir" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">id</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="__RequestVerificationToken" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">__RequestVerificationToken</stringProp>
+                <stringProp name="Argument.value">${csrf}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5197</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/Basket</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">200</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo 3000 ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Contenido esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">Items\[0\].Id</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extraer csrf" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">csrf</stringProp>
+            <stringProp name="RegexExtractor.regex">name="__RequestVerificationToken" type="hidden" value="([^"]+)"</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NO_ENCONTRADO</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+          </RegexExtractor>
+          <hashTree />
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extraer basketItemId" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">basketItemId</stringProp>
+            <stringProp name="RegexExtractor.regex">name="Items\[0\].Id" value="([^"]+)"</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NO_ENCONTRADO</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+          </RegexExtractor>
+          <hashTree />
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TC06 Actualizar carrito" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="Items[0].Id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">Items[0].Id</stringProp>
+                <stringProp name="Argument.value">${basketItemId}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="Items[0].Quantity" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">Items[0].Quantity</stringProp>
+                <stringProp name="Argument.value">3</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="__RequestVerificationToken" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">__RequestVerificationToken</stringProp>
+                <stringProp name="Argument.value">${csrf}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">5197</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/Basket/Update</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">15000</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Código HTTP esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">200</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Tiempo máximo 3000 ms" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree />
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Contenido esperado" enabled="true">
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="0">name="Items\[0\].Quantity" value="3"</stringProp>
+            </collectionProp>
+          </ResponseAssertion>
+          <hashTree />
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <stringProp name="filename" />
+      </ResultCollector>
+      <hashTree />
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <stringProp name="filename" />
+      </ResultCollector>
+      <hashTree />
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

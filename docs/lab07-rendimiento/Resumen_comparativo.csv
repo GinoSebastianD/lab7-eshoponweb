@@ -1,0 +1,30 @@
+﻿Ejecución,Muestreador,Muestras,Media ms,p95 ms,Fallos aserción,Error %,Solicitudes/s
+preliminar,TC01 Listar productos,1,1086.0,1086.0,1,100.0,0.92
+preliminar,Total,8,181.75,1086.0,1,12.5,2.93
+preliminar,TC06 Actualizar carrito,1,25.0,25.0,0,0.0,40.0
+preliminar,TC04 Editar producto,1,25.0,25.0,0,0.0,40.0
+preliminar,TC02 Filtrar catálogo,1,42.0,42.0,0,0.0,23.81
+preliminar,TC03 Crear producto,1,29.0,29.0,0,0.0,34.48
+preliminar,PREP Carrito - añadir,1,179.0,179.0,0,0.0,5.59
+preliminar,PREP Carrito - token,1,50.0,50.0,0,0.0,20.0
+preliminar,TC05 Eliminar producto,1,18.0,18.0,0,0.0,55.56
+carga100,TC01 Listar productos,100,1008.81,1017.85,100,100.0,3.56
+carga100,Total,1400,78.84,1004.0,100,7.14,35.9
+carga100,TC06 Actualizar carrito,200,2.99,5.0,0,0.0,5.45
+carga100,TC04 Editar producto,200,2.34,4.0,0,0.0,10.79
+carga100,TC03 Crear producto,200,2.33,4.95,0,0.0,10.81
+carga100,TC02 Filtrar catálogo,200,10.43,15.95,0,0.0,10.76
+carga100,PREP Carrito - añadir,200,5.23,8.95,0,0.0,5.42
+carga100,PREP Carrito - token,200,22.73,31.95,0,0.0,5.41
+carga100,TC05 Eliminar producto,100,2.84,4.0,0,0.0,5.53
+carga300,TC01 Listar productos,300,1013.21,1020.0,300,100.0,10.43
+carga300,Total,4200,82.73,1006.95,300,7.14,106.07
+carga300,TC06 Actualizar carrito,600,4.91,8.0,0,0.0,16.17
+carga300,TC04 Editar producto,600,4.19,6.0,0,0.0,32.09
+carga300,TC03 Crear producto,600,3.64,8.0,0,0.0,31.7
+carga300,TC02 Filtrar catálogo,600,15.19,22.0,0,0.0,31.6
+carga300,PREP Carrito - añadir,600,7.55,12.0,0,0.0,16.03
+carga300,PREP Carrito - token,600,35.61,48.0,0,0.0,15.99
+carga300,TC05 Eliminar producto,300,2.88,6.0,0,0.0,16.22
+assert1ms,TC01 Listar productos,1,1129.0,1129.0,1,100.0,0.89
+assert1ms,Total,1,1129.0,1129.0,1,100.0,0.89

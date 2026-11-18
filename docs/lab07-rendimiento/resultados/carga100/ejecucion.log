@@ -1,0 +1,13 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using C:\Users\ginod\.codex\.chatgpt-projects\g-p-6aa49eb4b7a88191a894c7394ec30fc2\lab07-performance\work\runs\carga100\ejecucion.jmx
+Starting standalone test @ 2026 Nov 17 13:19:40 PET (1794939580833)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1018 in 00:00:19 =   54.4/s Avg:    70 Min:     0 Max:  1089 Err:    65 (6.39%) Active: 38 Started: 100 Finished: 62
+summary +    382 in 00:00:21 =   17.8/s Avg:    99 Min:     1 Max:  1013 Err:    35 (9.16%) Active: 0 Started: 100 Finished: 100
+summary =   1400 in 00:00:40 =   34.9/s Avg:    78 Min:     0 Max:  1089 Err:   100 (7.14%)
+Tidying up ...    @ 2026 Nov 17 13:20:21 PET (1794939621422)
+... end of run
