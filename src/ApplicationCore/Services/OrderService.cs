@@ -36,24 +36,26 @@ public class OrderService : IOrderService
         var basketSpec = new BasketWithItemsSpecification(basketId);
         var basket = await _basketRepository.FirstOrDefaultAsync(basketSpec);
 
-        Guard.Against.Null(basket, nameof(basket));
+        Guard.Against.Null(basket);
         Guard.Against.EmptyBasketOnCheckout(basket.Items);
 
         var catalogItemsSpecification = new CatalogItemsSpecification(basket.Items.Select(item => item.CatalogItemId).ToArray());
         var catalogItems = await _itemRepository.ListAsync(catalogItemsSpecification);
 
         var items = basket.Items.Select(basketItem =>
-        {
-            var catalogItem = catalogItems.First(c => c.Id == basketItem.CatalogItemId);
-            var itemOrdered = new CatalogItemOrdered(catalogItem.Id, catalogItem.Name, _uriComposer.ComposePicUri(catalogItem.PictureUri));
-            var orderItem = new OrderItem(itemOrdered, basketItem.UnitPrice, basketItem.Quantity);
-            return orderItem;
-        }).ToList();
+            CreateOrderItem(basketItem, catalogItems.First(c => c.Id == basketItem.CatalogItemId))).ToList();
 
         var order = new Order(basket.BuyerId, shippingAddress, items);
 
         await _orderRepository.AddAsync(order);
         OrderCreatedEvent orderCreatedEvent = new OrderCreatedEvent(order);
         await _mediator.Publish(orderCreatedEvent);
+    }
+
+    private OrderItem CreateOrderItem(BasketItem basketItem, CatalogItem catalogItem)
+    {
+        var itemOrdered = new CatalogItemOrdered(
+            catalogItem.Id, catalogItem.Name, _uriComposer.ComposePicUri(catalogItem.PictureUri));
+        return new OrderItem(itemOrdered, basketItem.UnitPrice, basketItem.Quantity);
     }
 }
