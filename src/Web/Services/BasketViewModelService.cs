@@ -28,14 +28,13 @@ public class BasketViewModelService : IBasketViewModelService
     public async Task<BasketViewModel> GetOrCreateBasketForUser(string userName)
     {
         var basketSpec = new BasketWithItemsSpecification(userName);
-        var basket = (await _basketRepository.FirstOrDefaultAsync(basketSpec));
+        var basket = await _basketRepository.FirstOrDefaultAsync(basketSpec);
 
         if (basket == null)
         {
             return await CreateBasketForUser(userName);
         }
-        var viewModel = await Map(basket);
-        return viewModel;
+        return await Map(basket);
     }
 
     private async Task<BasketViewModel> CreateBasketForUser(string userId)
@@ -55,23 +54,21 @@ public class BasketViewModelService : IBasketViewModelService
         var catalogItemsSpecification = new CatalogItemsSpecification(basketItems.Select(b => b.CatalogItemId).ToArray());
         var catalogItems = await _itemRepository.ListAsync(catalogItemsSpecification);
 
-        var items = basketItems.Select(basketItem =>
+        return basketItems.Select(basketItem =>
+            MapBasketItem(basketItem, catalogItems.First(c => c.Id == basketItem.CatalogItemId))).ToList();
+    }
+
+    private BasketItemViewModel MapBasketItem(BasketItem basketItem, CatalogItem catalogItem)
+    {
+        return new BasketItemViewModel
         {
-            var catalogItem = catalogItems.First(c => c.Id == basketItem.CatalogItemId);
-
-            var basketItemViewModel = new BasketItemViewModel
-            {
-                Id = basketItem.Id,
-                UnitPrice = basketItem.UnitPrice,
-                Quantity = basketItem.Quantity,
-                CatalogItemId = basketItem.CatalogItemId,
-                PictureUrl = _uriComposer.ComposePicUri(catalogItem.PictureUri),
-                ProductName = catalogItem.Name
-            };
-            return basketItemViewModel;
-        }).ToList();
-
-        return items;
+            Id = basketItem.Id,
+            UnitPrice = basketItem.UnitPrice,
+            Quantity = basketItem.Quantity,
+            CatalogItemId = basketItem.CatalogItemId,
+            PictureUrl = _uriComposer.ComposePicUri(catalogItem.PictureUri),
+            ProductName = catalogItem.Name
+        };
     }
 
     public async Task<BasketViewModel> Map(Basket basket)
@@ -84,10 +81,8 @@ public class BasketViewModelService : IBasketViewModelService
         };
     }
 
-    public async Task<int> CountTotalBasketItems(string username)
+    public Task<int> CountTotalBasketItems(string username)
     {
-        var counter = await _basketQueryService.CountTotalBasketItems(username);
-
-        return counter;
+        return _basketQueryService.CountTotalBasketItems(username);
     }
 }
