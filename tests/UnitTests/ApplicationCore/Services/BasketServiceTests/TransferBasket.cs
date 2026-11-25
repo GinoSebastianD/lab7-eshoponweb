@@ -16,38 +16,23 @@ public class TransferBasket
     private readonly IRepository<Basket> _mockBasketRepo = Substitute.For<IRepository<Basket>>();
     private readonly IAppLogger<BasketService> _mockLogger = Substitute.For<IAppLogger<BasketService>>();
 
-    public class Results<T>
-    {
-        private readonly Queue<Func<T>> _values = new();
-        public Results(T result) { _values.Enqueue(() => result); }
-        public Results<T> Then(T value) { return Then(() => value); }
-        public Results<T> Then(Func<T> value)
-        {
-            _values.Enqueue(value);
-            return this;
-        }
-        public T Next() { return _values.Dequeue()(); }
-    }
-
-        [Fact]
+    [Fact]
     public async Task InvokesBasketRepositoryFirstOrDefaultAsyncOnceIfAnonymousBasketNotExists()
     {
-            var anonymousBasket = null as Basket;
-            var userBasket = new Basket(_existentUserBasketBuyerId);
-            
-        var results = new Results<Basket?>(anonymousBasket)
-                        .Then(userBasket);
-
-
-        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>()).Returns(x => results.Next());          
+        // Arrange
+        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>()).Returns((Basket?)null);
         var basketService = new BasketService(_mockBasketRepo, _mockLogger);
+        // Act
         await basketService.TransferBasketAsync(_nonexistentAnonymousBasketBuyerId, _existentUserBasketBuyerId);
-        await _mockBasketRepo.Received().FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>());
+        // Assert
+        await _mockBasketRepo.Received(1).FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>());
+        await _mockBasketRepo.DidNotReceive().DeleteAsync(Arg.Any<Basket>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
     public async Task TransferAnonymousBasketItemsWhilePreservingExistingUserBasketItems()
     {
+        // Arrange
         var anonymousBasket = new Basket(_existentAnonymousBasketBuyerId);
         anonymousBasket.AddItem(1, 10, 1);
         anonymousBasket.AddItem(3, 55, 7);
@@ -55,12 +40,11 @@ public class TransferBasket
         userBasket.AddItem(1, 10, 4);
         userBasket.AddItem(2, 99, 3);
 
-        var results = new Results<Basket>(anonymousBasket)
-                        .Then(userBasket);
-
-        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>()).Returns(x => results.Next());
+        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>()).Returns(anonymousBasket, userBasket);
         var basketService = new BasketService(_mockBasketRepo, _mockLogger);
-        await basketService.TransferBasketAsync(_nonexistentAnonymousBasketBuyerId, _existentUserBasketBuyerId);
+        // Act
+        await basketService.TransferBasketAsync(_existentAnonymousBasketBuyerId, _existentUserBasketBuyerId);
+        // Assert
         await _mockBasketRepo.Received().UpdateAsync(userBasket, Arg.Any<CancellationToken>());
 
         Assert.Equal(3, userBasket.Items.Count);
@@ -72,15 +56,15 @@ public class TransferBasket
     [Fact]
     public async Task RemovesAnonymousBasketAfterUpdatingUserBasket()
     {
+        // Arrange
         var anonymousBasket = new Basket(_existentAnonymousBasketBuyerId);
         var userBasket = new Basket(_existentUserBasketBuyerId);
 
-        var results = new Results<Basket>(anonymousBasket)
-                        .Then(userBasket);
-
-        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>()).Returns(x => results.Next());
+        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>()).Returns(anonymousBasket, userBasket);
         var basketService = new BasketService(_mockBasketRepo, _mockLogger);
-        await basketService.TransferBasketAsync(_nonexistentAnonymousBasketBuyerId, _existentUserBasketBuyerId);
+        // Act
+        await basketService.TransferBasketAsync(_existentAnonymousBasketBuyerId, _existentUserBasketBuyerId);
+        // Assert
         await _mockBasketRepo.Received().UpdateAsync(userBasket, Arg.Any<CancellationToken>());
         await _mockBasketRepo.Received().DeleteAsync(anonymousBasket, Arg.Any<CancellationToken>());
     }
@@ -88,15 +72,13 @@ public class TransferBasket
     [Fact]
     public async Task CreatesNewUserBasketIfNotExists()
     {
+        // Arrange
         var anonymousBasket = new Basket(_existentAnonymousBasketBuyerId);
-        var userBasket = null as Basket;
-
-        var results = new Results<Basket?>(anonymousBasket)
-                       .Then(userBasket);
-
-        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>() ,Arg.Any<CancellationToken>()).Returns(x => results.Next());
+        _mockBasketRepo.FirstOrDefaultAsync(Arg.Any<BasketWithItemsSpecification>(), Arg.Any<CancellationToken>()).Returns(anonymousBasket, (Basket?)null);
         var basketService = new BasketService(_mockBasketRepo, _mockLogger);
+        // Act
         await basketService.TransferBasketAsync(_existentAnonymousBasketBuyerId, _nonexistentUserBasketBuyerId);
-        await _mockBasketRepo.Received().AddAsync(Arg.Is<Basket>(x => x.BuyerId == _nonexistentUserBasketBuyerId), Arg.Any<CancellationToken>());
+        // Assert
+        await _mockBasketRepo.Received(1).AddAsync(Arg.Is<Basket>(x => x != null && x.BuyerId == _nonexistentUserBasketBuyerId), Arg.Any<CancellationToken>());
     }
 }
