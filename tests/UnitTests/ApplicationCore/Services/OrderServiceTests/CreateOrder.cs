@@ -34,7 +34,8 @@ public class CreateOrder
         _catalog.ListAsync(Arg.Any<CatalogItemsSpecification>(), Arg.Any<CancellationToken>()).Returns(new List<CatalogItem> { catalogItem });
         _uris.ComposePicUri("pic.png").Returns("https://example.com/pic.png");
         Order? saved = null;
-        _orders.AddAsync(Arg.Do<Order>(o => saved = o), Arg.Any<CancellationToken>()).Returns<Order>(call => call.Arg<Order>());
+        _orders.AddAsync(Arg.Do<Order>(o => saved = o), Arg.Any<CancellationToken>())
+            .Returns<Order>(call => call.Arg<Order>() ?? throw new InvalidOperationException("Expected an order to persist."));
 
         // Act
         await Service.CreateOrderAsync(1, _address);
