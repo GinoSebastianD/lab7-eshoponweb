@@ -1,0 +1,57 @@
+{
+  "component": {
+    "key": "eshop-pr7-refactoring",
+    "name": "eShopOnWeb - Practica 07 Refactoring",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "coverage",
+        "value": "5.2",
+        "bestValue": false
+      },
+      {
+        "metric": "bugs",
+        "value": "11",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "1796"
+      },
+      {
+        "metric": "code_smells",
+        "value": "232",
+        "bestValue": false
+      },
+      {
+        "metric": "duplicated_lines_density",
+        "value": "3.8",
+        "bestValue": false
+      },
+      {
+        "metric": "cognitive_complexity",
+        "value": "450",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "10994"
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "26",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "sqale_index",
+        "value": "1180",
+        "bestValue": false
+      }
+    ]
+  }
+}

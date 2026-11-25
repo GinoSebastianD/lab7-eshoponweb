@@ -1,0 +1,10 @@
+{
+  "before": 269,
+  "after": 266,
+  "resolved": [
+    "csharpsquid:S3236 eshop-pr7-refactoring:src/ApplicationCore/Services/BasketService.cs",
+    "csharpsquid:S3236 eshop-pr7-refactoring:src/ApplicationCore/Services/OrderService.cs",
+    "external_roslyn:CS8602 eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Services/BasketServiceTests/TransferBasket.cs"
+  ],
+  "new": []
+}

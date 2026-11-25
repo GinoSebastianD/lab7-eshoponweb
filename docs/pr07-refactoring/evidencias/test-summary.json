@@ -1,0 +1,39 @@
+[
+  {
+    "phase": "Base original",
+    "file": "baseline/baseline.trx",
+    "total": 44,
+    "passed": 44,
+    "failed": 0,
+    "failures": []
+  },
+  {
+    "phase": "RED: prueba del defecto",
+    "file": "red/tests.trx",
+    "total": 51,
+    "passed": 50,
+    "failed": 1,
+    "failures": [
+      {
+        "name": "Microsoft.eShopWeb.UnitTests.ApplicationCore.Services.BasketServiceTests.SameBuyerTransfer.LeavesBasketUnchangedWhenSourceAndDestinationAreTheSameBuyer",
+        "message": "Assert.Equal() Failure: Values differ\r\nExpected: 2\r\nActual:   4"
+      }
+    ]
+  },
+  {
+    "phase": "Caracterización antes del refactoring",
+    "file": "characterization-valid/tests.trx",
+    "total": 56,
+    "passed": 56,
+    "failed": 0,
+    "failures": []
+  },
+  {
+    "phase": "GREEN: versión refactorizada",
+    "file": "final/unit-tests.trx",
+    "total": 57,
+    "passed": 57,
+    "failed": 0,
+    "failures": []
+  }
+]

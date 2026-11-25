@@ -1,0 +1,57 @@
+[
+  {
+    "number": 17,
+    "url": "https://github.com/GinoSebastianD/lab7-eshoponweb/issues/17",
+    "title": "[Pr07 Refactoring] Evitar la transferencia de un carrito al mismo comprador",
+    "owner": "GinoSebastianD",
+    "label": "bug",
+    "priority": "Alta",
+    "duration": "45 min",
+    "module": "BasketService.TransferBasketAsync",
+    "strategy": "Cláusula de guarda / Clean Code"
+  },
+  {
+    "number": 18,
+    "url": "https://github.com/GinoSebastianD/lab7-eshoponweb/issues/18",
+    "title": "[Pr07 Refactoring] Centralizar la obtención o creación del carrito",
+    "owner": "lMafa1813l",
+    "label": "code smell",
+    "priority": "Media",
+    "duration": "35 min",
+    "module": "BasketService",
+    "strategy": "Extract Method / DRY"
+  },
+  {
+    "number": 19,
+    "url": "https://github.com/GinoSebastianD/lab7-eshoponweb/issues/19",
+    "title": "[Pr07 Refactoring] Separar la construcción de líneas del pedido",
+    "owner": "SebastianH777",
+    "label": "code smell",
+    "priority": "Media",
+    "duration": "40 min",
+    "module": "OrderService",
+    "strategy": "Extract Method / responsabilidad única"
+  },
+  {
+    "number": 20,
+    "url": "https://github.com/GinoSebastianD/lab7-eshoponweb/issues/20",
+    "title": "[Pr07 Refactoring] Simplificar el mapeo del carrito para la web",
+    "owner": "andyvillanueva24",
+    "label": "enhancement",
+    "priority": "Media",
+    "duration": "30 min",
+    "module": "BasketViewModelService",
+    "strategy": "Extract Method / Clean Code"
+  },
+  {
+    "number": 21,
+    "url": "https://github.com/GinoSebastianD/lab7-eshoponweb/issues/21",
+    "title": "[Pr07 Refactoring] Simplificar dobles y fortalecer pruebas de transferencia",
+    "owner": "FabianBustamante",
+    "label": "code smell",
+    "priority": "Media",
+    "duration": "25 min",
+    "module": "TransferBasket tests",
+    "strategy": "Simplify / Clean Code"
+  }
+]

@@ -1,0 +1,4309 @@
+{
+  "total": 269,
+  "issues": [
+    {
+      "key": "73240641-f69c-422a-9f39-07f42d70752c",
+      "rule": "css:S4667",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/wwwroot/css/_variables.css",
+      "line": 1,
+      "message": "Empty source",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "6a3853e7-50c4-41ad-bf02-c823f84bc2d6",
+      "rule": "csharpsquid:S1118",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Constants/AuthorizationConstants.cs",
+      "line": 3,
+      "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "2dd7e52d-edab-47f5-b28e-553b04d33ea9",
+      "rule": "csharpsquid:S2068",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Constants/AuthorizationConstants.cs",
+      "line": 8,
+      "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "4ca42101-8c30-4820-942f-045c1610eb4a",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/BasketAggregate/BasketItem.cs",
+      "line": 11,
+      "message": "Remove the unused private setter 'set_BasketId'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1a555143-1846-45ff-85f0-000677000464",
+      "rule": "csharpsquid:S2933",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/BuyerAggregate/Buyer.cs",
+      "line": 11,
+      "message": "Make '_paymentMethods' 'readonly'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "67bf443b-91bf-4f45-be99-87752ed89d27",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/BuyerAggregate/Buyer.cs",
+      "line": 20,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "0fe60cf8-90e1-4b42-ac76-d011a045cbc0",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/BuyerAggregate/PaymentMethod.cs",
+      "line": 5,
+      "message": "Remove the unused private setter 'set_Alias'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b9168743-4ee3-40bd-a5e3-fccfb16412ad",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/BuyerAggregate/PaymentMethod.cs",
+      "line": 6,
+      "message": "Remove the unused private setter 'set_CardId'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f665295f-6205-40b1-9cab-5c6a2197b69d",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/BuyerAggregate/PaymentMethod.cs",
+      "line": 7,
+      "message": "Remove the unused private setter 'set_Last4'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "12f77be1-08e9-45c3-b3f2-d1f9b5eefa35",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 14,
+      "message": "Remove the unused private setter 'set_CatalogType'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "bfa14985-9cc4-44e7-ad69-413b058b45cf",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 16,
+      "message": "Remove the unused private setter 'set_CatalogBrand'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b7170e87-d3ef-4b95-a69a-9b973cfc4756",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 35,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "869bc97d-14ca-4535-9d2c-43db854dc519",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 36,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ac410f79-1dc7-443d-93f1-58b83e882daf",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 37,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b8bb8185-ebda-4044-8e11-981b9359f500",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 46,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3a1008cb-6a50-4494-a3b5-4c47f2b0e0f2",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 52,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "8ce84755-7db1-479f-aeaa-ed678d1c156d",
+      "rule": "csharpsquid:S6562",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/CatalogItem.cs",
+      "line": 63,
+      "message": "Provide the \"DateTimeKind\" when creating this object.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "8112de51-c46c-4f30-8542-cf1efcd4afc1",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/OrderAggregate/CatalogItemOrdered.cs",
+      "line": 14,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "bb71e74d-9577-443e-90f6-544051b217ad",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/OrderAggregate/CatalogItemOrdered.cs",
+      "line": 15,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1ddc1cc5-c807-4386-a5ed-10ef6422a644",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/OrderAggregate/Handlers/OrderCreatedHandler.cs",
+      "line": 14,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e962aa39-0343-43bd-b6e4-a03b474c74de",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/OrderAggregate/Handlers/OrderCreatedHandler.cs",
+      "line": 14,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f384ef7a-8443-4bd2-8b69-318fe6f95043",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Entities/OrderAggregate/Order.cs",
+      "line": 15,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "62779ce3-b3bc-459d-8872-61441ff67b3d",
+      "rule": "external_roslyn:CA1860",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Extensions/GuardExtensions.cs",
+      "line": 12,
+      "message": "Es preferible comparar \"Count\" con 0 en lugar de usar \"Any()\", tanto por claridad como por rendimiento.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "56d0c406-42d4-4f3b-b28e-c7a430ca2839",
+      "rule": "csharpsquid:S2326",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Interfaces/IAppLogger.cs",
+      "line": 7,
+      "message": "'T' is not used in the interface.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e3d3ce8b-99bd-489d-8843-6def4f4ba696",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Services/BasketService.cs",
+      "line": 43,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e430d930-0e5e-401f-a018-790cc2533f6b",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Services/OrderService.cs",
+      "line": 39,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9ce221fe-1ce6-4d35-97f5-5faf2efab864",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/ApplicationCore/Services/UriComposer.cs",
+      "line": 13,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "fba5ebf4-1f48-44d4-9f2f-02d60e9c73a2",
+      "rule": "csharpsquid:S1135",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/CustomAuthStateProvider.cs",
+      "line": 15,
+      "message": "Complete the task associated to this 'TODO' comment.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d76529ae-364d-45c1-9b5d-a50e8ff03adc",
+      "rule": "csharpsquid:S3881",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Helpers/ToastComponent.cs",
+      "line": 7,
+      "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a9d501c8-853a-4575-8031-2a5286708be6",
+      "rule": "external_roslyn:CA1816",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Helpers/ToastComponent.cs",
+      "line": 83,
+      "message": "Cambie \"ToastComponent.Dispose()\" para llamar a GC.SuppressFinalize(object). Con esto se evitará que los tipos derivados que introducen un finalizador tengan que volver a implementar \"IDisposable\" para llamarlo.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "79a79056-474b-46c7-adce-9676af13ac8e",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/CatalogItemPage/Create.razor",
+      "line": 119,
+      "message": "Remove the unused private field '_badFileMessage'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "961a48c2-f34a-45d2-8ffb-00f59787dec2",
+      "rule": "csharpsquid:S2933",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/CatalogItemPage/Create.razor",
+      "line": 119,
+      "message": "Make '_badFileMessage' 'readonly'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "31839e4c-6bca-4e5b-bc4d-376b3efe4c82",
+      "rule": "csharpsquid:S1135",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/CatalogItemPage/Delete.razor",
+      "line": 110,
+      "message": "Complete the task associated to this 'TODO' comment.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "45444e40-9cd2-4287-82b7-88b2ab382b63",
+      "rule": "csharpsquid:S3358",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/CatalogItemPage/Edit.razor",
+      "line": 119,
+      "message": "Extract this nested ternary operation into an independent statement.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "47f7907c-d5cb-4a77-be7b-7479bebf600f",
+      "rule": "csharpsquid:S2933",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/CatalogItemPage/Edit.razor",
+      "line": 121,
+      "message": "Make '_badFileMessage' 'readonly'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e942a0e8-f339-416c-8f62-ceff897b4a9d",
+      "rule": "csharpsquid:S1144",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/CatalogItemPage/Edit.razor",
+      "line": 121,
+      "message": "Remove the unused private field '_badFileMessage'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a32363a2-17c0-4553-9a9b-e0335b0c76ea",
+      "rule": "csharpsquid:S3168",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/CatalogItemPage/List.razor.cs",
+      "line": 43,
+      "message": "Return 'Task' instead.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a6560d1a-b97e-4288-bddc-734fd5e9fa1a",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/RolePage/Create.razor",
+      "line": 75,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "36ac10db-79ce-4f22-bf10-6bb1fb841d24",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/RolePage/Delete.razor",
+      "line": 67,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1eccc5bc-b415-450d-8f6f-99e474742340",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/RolePage/Delete.razor",
+      "line": 77,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "7cac5149-c9c9-40b4-9b15-f787605e6a17",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/RolePage/DeleteUserFromRole.razor",
+      "line": 63,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "cb5cf7fd-106e-472c-8fdf-6e6f08d1cd7e",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/RolePage/DeleteUserFromRole.razor",
+      "line": 66,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "09f62799-765d-4708-8b28-9e1e9d3196e0",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/RolePage/Details.razor",
+      "line": 82,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "99b45f51-eed4-4242-bafe-7f178c01b61c",
+      "rule": "csharpsquid:S3168",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/RolePage/List.razor.cs",
+      "line": 34,
+      "message": "Return 'Task' instead.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a78c2144-4cf0-4a5c-96f1-3a00ae2b0742",
+      "rule": "csharpsquid:S1905",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Create.razor",
+      "line": 92,
+      "message": "Remove this unnecessary cast to 'ChangeEventArgs'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1b4fedf6-5604-42e9-9dab-f29d4aebded0",
+      "rule": "csharpsquid:S2933",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Create.razor",
+      "line": 130,
+      "message": "Make '_selectedRoles' 'readonly'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "8f14bc04-dd3f-4694-97fc-0600b48a9eca",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Create.razor",
+      "line": 149,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "cbe56f21-9955-4798-ac31-6642465b5198",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Delete.razor",
+      "line": 69,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "922ed966-f6e0-4d9a-a753-61315b5962fa",
+      "rule": "csharpsquid:S1905",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Edit.razor",
+      "line": 92,
+      "message": "Remove this unnecessary cast to 'ChangeEventArgs'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "652137fa-6df9-4ced-af65-ac4f95dad1ab",
+      "rule": "csharpsquid:S2933",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Edit.razor",
+      "line": 131,
+      "message": "Make '_selectedRoles' 'readonly'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "08c48fa8-2f5e-4bd7-91eb-cb4b21f176db",
+      "rule": "csharpsquid:S2933",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Edit.razor",
+      "line": 132,
+      "message": "Make '_startingRoles' 'readonly'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "49c2b5f3-83ab-4e8c-afa6-119f9f727850",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Edit.razor",
+      "line": 161,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a897de65-9261-4185-ab5e-14c4025e89bd",
+      "rule": "csharpsquid:S3267",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Edit.razor",
+      "line": 175,
+      "message": "Loop should be simplified by calling Select(role => role.Name))",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b274e018-4ace-4db2-a6e2-e2afbec9dd9b",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/Edit.razor",
+      "line": 183,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "0d9b5339-add7-4108-8787-e792639759bd",
+      "rule": "external_roslyn:CA2253",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/List.razor.cs",
+      "line": 32,
+      "message": "Los marcadores de posición con nombre de la plantilla de mensaje de registro no deben estar formados solo por caracteres numéricos",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9ad87f27-f524-4f4e-bb97-a4ee52e05dcd",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/List.razor.cs",
+      "line": 32,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "36852265-23e9-4425-8043-070c7a27040c",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/List.razor.cs",
+      "line": 56,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "75e37cd0-0450-44e4-b679-e37be74804f8",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/List.razor.cs",
+      "line": 56,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1b4675ac-0a4f-4520-9ebe-093095e7e067",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/List.razor.cs",
+      "line": 62,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b6cc3dde-a566-403a-9854-31ec384927e3",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Pages/UserPage/List.razor.cs",
+      "line": 62,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1208ceeb-c3df-40d4-b599-790c6f63f6a8",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogItemServiceDecorator.cs",
+      "line": 40,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "483c93cc-3fcf-440c-940f-2f54eee00e6d",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogItemServiceDecorator.cs",
+      "line": 40,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "6ef0dd86-1836-4c57-82c6-efbe2701f861",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogItemServiceDecorator.cs",
+      "line": 64,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "be97b93e-e0e4-410c-a5e8-cbac2d55bc31",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogItemServiceDecorator.cs",
+      "line": 64,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3bd89779-1425-4962-8f4f-a1a7632afe81",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogLookupDataServiceDecorator .cs",
+      "line": 35,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9fd26aaa-ed59-4598-a98e-8b14ef7e88e3",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogLookupDataServiceDecorator .cs",
+      "line": 35,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "15fd6986-0440-4c99-9c4d-59c8a0e33872",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogLookupDataServiceDecorator .cs",
+      "line": 42,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "279186af-ccf2-4e75-b833-ddba7e0d175f",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CachedCatalogLookupDataServiceDecorator .cs",
+      "line": 42,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9926b37e-4a96-439a-af10-532b0ad83d54",
+      "rule": "csharpsquid:S927",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CatalogItemService.cs",
+      "line": 40,
+      "message": "Rename parameter 'catalogItemId' to 'id' to match the interface declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "32c6f963-4caa-46b9-bbb9-d130bd03267c",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CatalogLookupDataService.cs",
+      "line": 37,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a6b068ef-8756-44e1-8e6f-3ec9d30fd7f0",
+      "rule": "csharpsquid:S6678",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/CatalogLookupDataService.cs",
+      "line": 37,
+      "message": "Use PascalCase for named placeholders.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b78a5e00-cdf6-430c-a463-7b4ee2cd6cd7",
+      "rule": "external_roslyn:CA1869",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 57,
+      "message": "Evite crear una nueva instancia de \"JsonSerializerOptions\" para cada operación de serialización. En su lugar, almacene en caché y reutilice instancias.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "7a3b114a-b5fa-4910-abf1-a7bd960e9da7",
+      "rule": "external_roslyn:CA1869",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 74,
+      "message": "Evite crear una nueva instancia de \"JsonSerializerOptions\" para cada operación de serialización. En su lugar, almacene en caché y reutilice instancias.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "619846c9-c83f-4e31-bb77-77a9285d25a5",
+      "rule": "external_roslyn:CA1869",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 92,
+      "message": "Evite crear una nueva instancia de \"JsonSerializerOptions\" para cada operación de serialización. En su lugar, almacene en caché y reutilice instancias.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a88d831b-c5e3-4cf1-8c50-2b9c8706fed4",
+      "rule": "external_roslyn:CA1869",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 112,
+      "message": "Evite crear una nueva instancia de \"JsonSerializerOptions\" para cada operación de serialización. En su lugar, almacene en caché y reutilice instancias.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "0c656eda-c1ce-4293-b0aa-af034f78ea84",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 156,
+      "message": "Make 'ToJson' a static method.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "83eb6db7-bcbe-408e-81b4-0039f409e40e",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 156,
+      "message": "El miembro \"ToJson\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "11b4623e-f081-4ffd-8483-e993f25d7304",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 161,
+      "message": "El miembro \"FromHttpResponseMessage\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "472aa0e2-dd49-47e8-b68f-f21a51805e68",
+      "rule": "external_roslyn:CA1869",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/HttpService.cs",
+      "line": 163,
+      "message": "Evite crear una nueva instancia de \"JsonSerializerOptions\" para cada operación de serialización. En su lugar, almacene en caché y reutilice instancias.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "cd628ba3-ae18-4dd9-8edb-b44fa1c6f475",
+      "rule": "csharpsquid:S927",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/RoleManagementService.cs",
+      "line": 17,
+      "message": "Rename parameter 'newRole' to 'role' to match the interface declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b4542ff1-304a-4f6a-804c-a80d270b6355",
+      "rule": "csharpsquid:S3881",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/ToastService.cs",
+      "line": 14,
+      "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "4774c518-e7a2-4f9c-ae35-8bd7296fb660",
+      "rule": "external_roslyn:CA1816",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/ToastService.cs",
+      "line": 50,
+      "message": "Cambie \"ToastService.Dispose()\" para llamar a GC.SuppressFinalize(object). Con esto se evitará que los tipos derivados que introducen un finalizador tengan que volver a implementar \"IDisposable\" para llamarlo.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "13b03098-1835-44ae-ab67-12d1aa4ea602",
+      "rule": "csharpsquid:S6672",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/UserManagementService.cs",
+      "line": 8,
+      "message": "Update this logger to use its enclosing type.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "5d2bdabc-6ca0-424c-b656-0a01103f34cd",
+      "rule": "csharpsquid:S927",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/UserManagementService.cs",
+      "line": 16,
+      "message": "Rename parameter 'userId' to 'id' to match the interface declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "37319c2e-45b6-4036-aca6-a47b9f57fa8c",
+      "rule": "csharpsquid:S927",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/Services/UserManagementService.cs",
+      "line": 26,
+      "message": "Rename parameter 'userId' to 'id' to match the interface declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e2da293a-e646-4c8a-9f54-bb8efbab2532",
+      "rule": "css:S7924",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/wwwroot/css/admin.css",
+      "line": 91,
+      "message": "Text does not meet the minimal contrast requirement with its background.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f4eeec0f-fd7c-4fe5-a82c-7d7e934dc336",
+      "rule": "css:S7924",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorAdmin/wwwroot/css/admin.css",
+      "line": 96,
+      "message": "Text does not meet the minimal contrast requirement with its background.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "0a45fa54-5f7e-45ec-94c3-073568a9c821",
+      "rule": "external_roslyn:CA1018",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/BlazorShared/Attributes/EndpointAttribute.cs",
+      "line": 5,
+      "message": "Especifique AttributeUsage en EndpointAttribute.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "7cb082b6-37b2-4082-8722-0735046a0fbe",
+      "rule": "csharpsquid:S3993",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/BlazorShared/Attributes/EndpointAttribute.cs",
+      "line": 5,
+      "message": "Specify AttributeUsage on 'EndpointAttribute'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "8e4dbab6-030a-469f-b5f2-3c00e1fb3976",
+      "rule": "csharpsquid:S927",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContext.cs",
+      "line": 22,
+      "message": "Rename parameter 'builder' to 'modelBuilder' to match the base class declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "cadc1456-ada4-4735-a581-ef136275f6c2",
+      "rule": "csharpsquid:S1118",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 10,
+      "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "85f7a473-6144-448b-82de-618245244ee5",
+      "rule": "csharpsquid:S6966",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 21,
+      "message": "Await MigrateAsync instead.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "08264f8f-e789-41d5-a80f-8b2447835175",
+      "rule": "external_roslyn:CA2254",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 54,
+      "message": "La plantilla de mensaje de registro no debe variar entre las llamadas a \"LoggerExtensions.LogError(ILogger, string?, params object?[])\"",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "2463a4f4-6f98-43a9-bd72-dd43591de247",
+      "rule": "csharpsquid:S6667",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 54,
+      "message": "Logging in a catch clause should pass the caught exception as a parameter.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3501d001-161e-4a63-a184-b09af418063f",
+      "rule": "external_roslyn:CA1859",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 60,
+      "message": "Cambiar el tipo de valor devuelto del método 'GetPreconfiguredCatalogBrands' de 'System.Collections.Generic.IEnumerable<Microsoft.eShopWeb.ApplicationCore.Entities.CatalogBrand>' a 'System.Collections.Generic.List<Microsoft.eShopWeb.ApplicationCore.Entities.CatalogBrand>' para mejorar el rendimiento",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "91a6cd26-052b-46e3-a6bd-ee1319e555a2",
+      "rule": "external_roslyn:CA1859",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 72,
+      "message": "Cambiar el tipo de valor devuelto del método 'GetPreconfiguredCatalogTypes' de 'System.Collections.Generic.IEnumerable<Microsoft.eShopWeb.ApplicationCore.Entities.CatalogType>' a 'System.Collections.Generic.List<Microsoft.eShopWeb.ApplicationCore.Entities.CatalogType>' para mejorar el rendimiento",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "10151059-8fc2-4262-bea8-c8e218620602",
+      "rule": "external_roslyn:CA1859",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 83,
+      "message": "Cambiar el tipo de valor devuelto del método 'GetPreconfiguredItems' de 'System.Collections.Generic.IEnumerable<Microsoft.eShopWeb.ApplicationCore.Entities.CatalogItem>' a 'System.Collections.Generic.List<Microsoft.eShopWeb.ApplicationCore.Entities.CatalogItem>' para mejorar el rendimiento",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "43e7dcb5-1b70-4ea7-9232-2305549e2c78",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 87,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "15576bb4-8f1c-41d7-8179-0e21af9b9bca",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 88,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "fefde6b6-4c7d-4c57-ab67-db87cf18b666",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 89,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a969733b-7263-43ce-8d47-5a094b95e961",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 90,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f23fb525-2ca3-4c37-935f-b299e860a63f",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 91,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3e1e7747-ab4c-44f2-bbf1-6960aa43116c",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 92,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "424e5b15-b86f-4802-9428-0fd440e96438",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 93,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9b801e82-57b9-4cee-abd1-280043dd66b0",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 94,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "4e7595d6-d7cd-4695-b9e3-9bbbdcf8c3df",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 95,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "efc6af4f-bca4-43e5-a225-ddc8f4d036f2",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 96,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "c45e55ab-3b04-4968-b8c6-df9de56bdc30",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 97,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "4ca41bb3-6c82-448a-8cd4-a70bdfa3af13",
+      "rule": "csharpsquid:S5332",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Data/CatalogContextSeed.cs",
+      "line": 98,
+      "message": "Using http protocol is insecure. Use https instead.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "13049391-3a04-49a8-a027-a062efc07159",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Dependencies.cs",
+      "line": 40,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "4d17ed42-b99f-452e-8bf4-0b31a2d90346",
+      "rule": "csharpsquid:S110",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Identity/AppIdentityDbContext.cs",
+      "line": 7,
+      "message": "This class has 6 parents which is greater than 5 authorized.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "dde1ce38-6b09-4eb7-a21f-84e67ad6d6a9",
+      "rule": "csharpsquid:S1185",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Identity/AppIdentityDbContext.cs",
+      "line": 14,
+      "message": "Remove this method 'OnModelCreating' to simply inherit its behavior.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "eb7a93cf-60e6-49a6-9059-dde895acbf67",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Identity/AppIdentityDbContext.cs",
+      "line": 19,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "5563cbc9-7053-4a8b-8a95-909a50d67488",
+      "rule": "csharpsquid:S1118",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Identity/AppIdentityDbContextSeed.cs",
+      "line": 8,
+      "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "fc64e610-cd5f-4253-bde7-8082f61cebf6",
+      "rule": "csharpsquid:S6966",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Identity/AppIdentityDbContextSeed.cs",
+      "line": 17,
+      "message": "Await MigrateAsync instead.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a5705c2e-a972-422f-8c35-96e059b7a0f2",
+      "rule": "csharpsquid:S2094",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Identity/ApplicationUser.cs",
+      "line": 5,
+      "message": "Remove this empty class, write its code or make it an \"interface\".",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a6cced5e-11fb-4045-a757-5b12bc332e7d",
+      "rule": "external_roslyn:CA2254",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Logging/LoggerAdapter.cs",
+      "line": 16,
+      "message": "La plantilla de mensaje de registro no debe variar entre las llamadas a \"LoggerExtensions.LogWarning(ILogger, string?, params object?[])\"",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "55de7c2d-8af5-4459-bf04-43ca4b53440d",
+      "rule": "external_roslyn:CA2254",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Infrastructure/Logging/LoggerAdapter.cs",
+      "line": 21,
+      "message": "La plantilla de mensaje de registro no debe variar entre las llamadas a \"LoggerExtensions.LogInformation(ILogger, string?, params object?[])\"",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "8f0623bc-5644-415e-b7d2-564731b2550a",
+      "rule": "csharpsquid:S927",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/PublicApi/AuthEndpoints/AuthenticateEndpoint.cs",
+      "line": 31,
+      "message": "Rename parameter 'cancellationToken' to 'ct' to match the base class declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ed78171c-ec29-49b6-8778-1a6b21238568",
+      "rule": "csharpsquid:S1006",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/PublicApi/AuthEndpoints/AuthenticateEndpoint.cs",
+      "line": 31,
+      "message": "Remove the default parameter value to match the signature of overridden method.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9fff0fae-a8ad-4853-8fa2-74efe99d2c45",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/AuthEndpoints/AuthenticateEndpoint.cs",
+      "line": 37,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "84b3428b-fed0-44b7-8808-c3776eaa02be",
+      "rule": "csharpsquid:S3442",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/BaseResponse.cs",
+      "line": 10,
+      "message": "Change the visibility of this constructor to 'protected'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "94e2982f-10ad-4971-ac16-ac04b9ddb739",
+      "rule": "csharpsquid:S3442",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/BaseResponse.cs",
+      "line": 15,
+      "message": "Change the visibility of this constructor to 'protected'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "bb7ee1cc-397a-4075-83dd-f8065f74cef4",
+      "rule": "docker:S6471",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Dockerfile",
+      "line": 22,
+      "message": "This image runs with \"root\" or \"containerAdministrator\" as the default user. Make sure it is safe here.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f8a66682-184c-473e-9482-2526f2d17729",
+      "rule": "csharpsquid:S8969",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Extensions/ServiceCollectionExtensions.cs",
+      "line": 70,
+      "message": "Remove this null-forgiving operator; the compiler already knows this expression is not null here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d9d6dc19-2758-47b2-8aca-3c8e8c0e206d",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Middleware/ExceptionMiddleware.cs",
+      "line": 31,
+      "message": "El miembro \"HandleExceptionAsync\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d07f42b1-27b3-4d6e-88e2-6e8a310f6505",
+      "rule": "csharpsquid:S8949",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Middleware/ExceptionMiddleware.cs",
+      "line": 38,
+      "message": "Pass the 'context.RequestAborted' to this method to allow cancellation of the operation, or use 'CancellationToken.None' to opt out explicitly.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "20eb6dfc-15df-47f6-8645-40efe0abbca4",
+      "rule": "csharpsquid:S8949",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Middleware/ExceptionMiddleware.cs",
+      "line": 47,
+      "message": "Pass the 'context.RequestAborted' to this method to allow cancellation of the operation, or use 'CancellationToken.None' to opt out explicitly.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9b23c275-3360-4a90-a28c-b7a9d6c4a283",
+      "rule": "csharpsquid:S1135",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Program.cs",
+      "line": 49,
+      "message": "Complete the task associated to this 'TODO' comment.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e0f12a18-ae26-463b-bf9a-f857bf147d45",
+      "rule": "csharpsquid:S1075",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Program.cs",
+      "line": 55,
+      "message": "Refactor your code not to use hardcoded absolute paths or URIs.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1506cc5a-088c-483b-bf81-b70adcd54d31",
+      "rule": "csharpsquid:S6966",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Program.cs",
+      "line": 88,
+      "message": "Await RunAsync instead.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "503dabde-27b3-4ea3-921c-3030eee17db0",
+      "rule": "csharpsquid:S1118",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Program.cs",
+      "line": 90,
+      "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9d6de369-831b-4ac7-9759-14ede00032f6",
+      "rule": "external_roslyn:ASP0027",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/PublicApi/Program.cs",
+      "line": 90,
+      "message": "Using public partial class Program { } to make the generated Program class public is no longer required in ASP.NET Core apps. See https://aka.ms/aspnetcore-warnings/ASP0027 for more details.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "acf98c5a-9fdb-476c-a896-f2631eb64ef5",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/RoleManagementEndpoints/DeleteRoleEndpoint.cs",
+      "line": 40,
+      "message": "'System.Exception' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e34fce73-7f8d-4561-a680-d679bd5b0fa1",
+      "rule": "csharpsquid:S1481",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/RoleManagementEndpoints/UpdateRoleEndpoint.cs",
+      "line": 40,
+      "message": "Remove the unused local variable 'result'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d6e51d16-af04-4564-a578-54d4390afe51",
+      "rule": "csharpsquid:S1116",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/UserManagementEndpoints/CreateUserEndpoint.cs",
+      "line": 40,
+      "message": "Remove this empty statement.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "bd7c4f1a-e7c8-4cc9-880c-a31859c887ed",
+      "rule": "csharpsquid:S8969",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/UserManagementEndpoints/CreateUserEndpoint.cs",
+      "line": 55,
+      "message": "Remove this null-forgiving operator; the compiler already knows this expression is not null here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f4365689-9c6a-4d89-8868-d7b763aa9bfa",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/PublicApi/UserManagementEndpoints/SaveRolesForUserEndpoint.cs",
+      "line": 41,
+      "message": "'System.Exception' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d5b7e0bc-725e-4c2f-bc64-342ef893ba21",
+      "rule": "secrets:S6703",
+      "severity": "BLOCKER",
+      "component": "eshop-pr7-refactoring:src/PublicApi/appsettings.Docker.json",
+      "line": 3,
+      "message": "Make sure this database password gets changed and removed from the code.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e3cfefbf-034e-4310-8a89-83c42d0cd9a8",
+      "rule": "secrets:S6703",
+      "severity": "BLOCKER",
+      "component": "eshop-pr7-refactoring:src/PublicApi/appsettings.Docker.json",
+      "line": 4,
+      "message": "Make sure this database password gets changed and removed from the code.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "13f0f840-a9e8-44b6-bf53-cdf070ac6a4e",
+      "rule": "csharpsquid:S1118",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Helpers/GitHubClaimsHelper.cs",
+      "line": 10,
+      "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "01f3d396-e283-4313-ad64-c6e6eff9b701",
+      "rule": "csharpsquid:S8970",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Login.cshtml",
+      "line": 79,
+      "message": "Remove this null-forgiving operator; nullable warnings are disabled here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ac7e19d0-3ac2-4c8f-8fc0-9dc365aac860",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Login.cshtml.cs",
+      "line": 76,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "abde49da-9c64-48f0-95cc-f2f7fc0cfa4f",
+      "rule": "csharpsquid:S8969",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Login.cshtml.cs",
+      "line": 77,
+      "message": "Remove this null-forgiving operator; the compiler already knows this expression is not null here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e6662b37-92c3-4886-a379-a9f029c998a0",
+      "rule": "csharpsquid:S8969",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Login.cshtml.cs",
+      "line": 77,
+      "message": "Remove this null-forgiving operator; the compiler already knows this expression is not null here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "7feb58ab-7b94-48dd-8c18-fc6fa4cbf414",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Login.cshtml.cs",
+      "line": 113,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "14f60cb7-0612-4234-9b47-f42eeb9be24e",
+      "rule": "csharpsquid:S1135",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Logout.cshtml.cs",
+      "line": 13,
+      "message": "Complete the task associated to this 'TODO' comment.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9301c923-cf20-40dd-abb7-3bc1af59b0fc",
+      "rule": "csharpsquid:S1186",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Logout.cshtml.cs",
+      "line": 27,
+      "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ae06a59a-2e65-4f22-8f98-bdb5497dfcb0",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Areas/Identity/Pages/Account/Register.cshtml.cs",
+      "line": 80,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a3497fac-b7b7-425b-b7d0-b08ce96fe797",
+      "rule": "csharpsquid:S1135",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Configuration/ConfigureCookieSettings.cs",
+      "line": 13,
+      "message": "Complete the task associated to this 'TODO' comment.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d91e2d69-7c64-458c-80fc-5e51ac3e6105",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Configuration/ConfigureCookieSettings.cs",
+      "line": 14,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "7e0fe957-2cfb-4649-9042-71cf17f9a23a",
+      "rule": "csharpsquid:S1135",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Configuration/RevokeAuthenticationEvents.cs",
+      "line": 8,
+      "message": "Complete the task associated to this 'TODO' comment.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "abc8dba3-d009-4286-99cb-245a7f1ee463",
+      "rule": "csharpsquid:S1481",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Configuration/RevokeAuthenticationEvents.cs",
+      "line": 25,
+      "message": "Remove the unused local variable 'revokeKeys'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "27db3881-8a2f-4530-8edf-badd38b7ca1c",
+      "rule": "csharpsquid:S2629",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Configuration/RevokeAuthenticationEvents.cs",
+      "line": 27,
+      "message": "Don't use string interpolation in logging message templates.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "925b1035-9227-4097-8f3b-efa70caa190a",
+      "rule": "external_roslyn:CA2254",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Configuration/RevokeAuthenticationEvents.cs",
+      "line": 27,
+      "message": "La plantilla de mensaje de registro no debe variar entre las llamadas a \"LoggerExtensions.LogDebug(ILogger, string?, params object?[])\"",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "c1c7ad6a-13fe-47ee-9236-3af78a5acb60",
+      "rule": "external_roslyn:CA1873",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Configuration/RevokeAuthenticationEvents.cs",
+      "line": 27,
+      "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "bf9df619-c24a-4da4-a553-7352090278bc",
+      "rule": "csharpsquid:S1075",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 27,
+      "message": "Refactor your code not to use hardcoded absolute paths or URIs.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "cd60474c-e202-4dd9-b3fe-4107ebd3e9e5",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 81,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "29ca8262-f114-4880-a600-ab043beb263c",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 91,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d638f94f-499b-4bf3-9054-bd3357bbeaca",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 112,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d4d56012-6563-4b2a-a805-b967ba8e70ea",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 116,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d2a5474e-3287-4163-bf58-e608e1211db6",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 242,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "577248ce-b960-4844-8918-2d04fa6dcd8f",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 248,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "609d0f1d-813c-4679-981f-a74d44e5fe12",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 280,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a09a8283-d3cc-4950-8734-b0de646a600e",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 310,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "03b63990-d3a0-4259-9c18-24db619f6b14",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 325,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "5fb96949-c64b-49f5-afc1-24362e65d319",
+      "rule": "csharpsquid:S4136",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 333,
+      "message": "All 'EnableAuthenticator' method overloads should be adjacent.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b939fae0-2974-4f92-8370-09bc1621ffa1",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 417,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "dc7188fb-c01b-479b-a1cf-7a4bc57e6487",
+      "rule": "csharpsquid:S112",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 435,
+      "message": "'System.ApplicationException' should not be thrown by user code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "12c774f2-fe50-4674-abb7-fa9060ffb515",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 449,
+      "message": "El miembro \"FormatKey\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b87e9498-a111-41b5-bad0-e7e8ab675e1e",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 449,
+      "message": "Make 'FormatKey' a static method.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "876248b2-3302-4c49-ac7b-65ee2f754dd2",
+      "rule": "external_roslyn:CA1846",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 455,
+      "message": "Preferir \"AsSpan\" a \"Substring\" cuando hay sobrecargas basadas en intervalos disponibles",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "daf3cfcb-300a-402a-a2f4-a8ead4df7ef5",
+      "rule": "external_roslyn:CA1834",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 455,
+      "message": "Use \"StringBuilder.Append(char)\" en lugar de \"StringBuilder.Append(string)\" cuando la entrada es una cadena de unidad constante.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f32c2754-dfe0-466d-adec-58e38fa122fc",
+      "rule": "external_roslyn:CA1846",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/ManageController.cs",
+      "line": 460,
+      "message": "Preferir \"AsSpan\" a \"Substring\" cuando hay sobrecargas basadas en intervalos disponibles",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "4a05fada-8417-4fd3-a4db-529ea7df2305",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/OrderController.cs",
+      "line": 25,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "19367cfc-f40f-46c4-9b9c-acfb3aedbf38",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/OrderController.cs",
+      "line": 34,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "59f2d48d-e98d-4424-af2d-f4f5a5875ebd",
+      "rule": "csharpsquid:S6960",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Controllers/UserController.cs",
+      "line": 17,
+      "message": "This controller has multiple responsibilities and could be split into 2 smaller controllers.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d97683c1-f375-4a8b-8d02-e662839d993b",
+      "rule": "docker:S6471",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Dockerfile",
+      "line": 20,
+      "message": "This image runs with \"root\" or \"containerAdministrator\" as the default user. Make sure it is safe here.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "6861ad5a-8b81-4b14-987f-dd5753ce5fa5",
+      "rule": "csharpsquid:S3400",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Extensions/CacheHelpers.cs",
+      "line": 13,
+      "message": "Remove this method and declare a constant for this value.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "33942d44-b5fb-4ae0-bd3b-74822b94703f",
+      "rule": "csharpsquid:S3400",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Extensions/CacheHelpers.cs",
+      "line": 18,
+      "message": "Remove this method and declare a constant for this value.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "7279c0a1-966c-484f-81e7-98981eeee113",
+      "rule": "external_roslyn:CA1861",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Extensions/ServiceCollectionExtensions.cs",
+      "line": 61,
+      "message": "Preferir campos \"static readonly\" frente a argumentos de matriz constantes si se llama repetidamente al método llamado y no muta la matriz pasada",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1dba0eae-d101-42d1-b3a5-2a5641af74e7",
+      "rule": "external_roslyn:CA1861",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Extensions/ServiceCollectionExtensions.cs",
+      "line": 62,
+      "message": "Preferir campos \"static readonly\" frente a argumentos de matriz constantes si se llama repetidamente al método llamado y no muta la matriz pasada",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "c62cb211-8a8c-4bd4-bf4c-1c4a6e82eacd",
+      "rule": "csharpsquid:S1075",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Extensions/ServiceCollectionExtensions.cs",
+      "line": 73,
+      "message": "Refactor your code not to use hardcoded absolute paths or URIs.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "667b0935-2569-4c09-92fc-a452ad438bc3",
+      "rule": "csharpsquid:S3267",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Extensions/UserManagerExtensions.cs",
+      "line": 19,
+      "message": "Loop should be simplified by calling Select(addedClaim => addedClaim.Key))",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1b7d85f4-f2ba-4a32-a43e-80c48dce0fd8",
+      "rule": "external_roslyn:CA2263",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Extensions/WebApplicationExtensions.cs",
+      "line": 52,
+      "message": "Preferir la sobrecarga genérica \"System.Enum.GetName<TEnum>(TEnum)\" en lugar de \"System.Enum.GetName(System.Type, object)\"",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "c7e5e827-6b4e-4686-8f5d-b6696b5836a7",
+      "rule": "external_roslyn:CA2016",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/HealthChecks/HomePageHealthCheck.cs",
+      "line": 22,
+      "message": "Reenviar el parámetro \"cancellationToken\" al método \"GetAsync\" o pasar \"CancellationToken.None\" de forma explícita para indicar que no se propagó el token intencionalmente",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d3896d64-673f-4d7b-9fdb-5d98ff4b904a",
+      "rule": "csharpsquid:S8949",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/HealthChecks/HomePageHealthCheck.cs",
+      "line": 22,
+      "message": "Pass the 'cancellationToken' to this method to allow cancellation of the operation, or use 'CancellationToken.None' to opt out explicitly.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "65b865d9-226e-4d59-9e64-10e9dc42ac82",
+      "rule": "csharpsquid:S8949",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/HealthChecks/HomePageHealthCheck.cs",
+      "line": 23,
+      "message": "Pass the 'cancellationToken' to this method to allow cancellation of the operation, or use 'CancellationToken.None' to opt out explicitly.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "bab193da-23cf-42c4-ae64-36af39054ca0",
+      "rule": "external_roslyn:CA2016",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/HealthChecks/HomePageHealthCheck.cs",
+      "line": 23,
+      "message": "Reenviar el parámetro \"cancellationToken\" al método \"ReadAsStringAsync\" o pasar \"CancellationToken.None\" de forma explícita para indicar que no se propagó el token intencionalmente",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a7493e22-ec84-409a-ab8f-c4a3a29fd32a",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Admin/EditCatalogItem.cshtml",
+      "line": 10,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "899a9792-569a-4fa6-877b-f5f4341891bb",
+      "rule": "Web:S5254",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Admin/Index.cshtml",
+      "line": 12,
+      "message": "Add \"lang\" and/or \"xml:lang\" attributes to the \"<html>\" or \"<body>\" element",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "03e007f6-ff91-4e5f-bf5b-61f82cce5f02",
+      "rule": "Web:S7926",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Admin/Index.cshtml",
+      "line": 15,
+      "message": "Meta viewport disables zoom via user-scalable=no.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9493de27-a489-4874-8ad1-f5e3d4eb6b0d",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Checkout.cshtml",
+      "line": 8,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "5d49d92d-187f-4f30-9c91-30ea40f17c24",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Checkout.cshtml",
+      "line": 33,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "72be4ac9-5156-49e2-8dc6-c0d5b4d50bf3",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Checkout.cshtml.cs",
+      "line": 72,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a1f686ab-c161-43d6-adef-00f9524a7088",
+      "rule": "csharpsquid:S3330",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Checkout.cshtml.cs",
+      "line": 93,
+      "message": "Set the 'HttpOnly' flag on this cookie.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "bdaa7a90-5a34-446c-a498-582f3d0b5146",
+      "rule": "csharpsquid:S2092",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Checkout.cshtml.cs",
+      "line": 93,
+      "message": "Set the 'Secure' flag on this cookie.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "00b1839f-2177-4961-b172-78827332c8a5",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml",
+      "line": 8,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "557c466e-5924-461d-85f3-d3069ae85508",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml",
+      "line": 33,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ded8c928-37f0-47ac-9acf-a2a92bda4be0",
+      "rule": "Web:InputWithoutLabelCheck",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml",
+      "line": 39,
+      "message": "Add an \"id\" attribute to this input field and associate it with a label.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b455e185-cdf8-45dd-85a8-1f402344f794",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml.cs",
+      "line": 70,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "425947d3-0d75-43d2-b571-a2609b021d74",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml.cs",
+      "line": 75,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "03ad9667-30ff-4de9-bd73-5083c3605a30",
+      "rule": "csharpsquid:S1066",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml.cs",
+      "line": 85,
+      "message": "Merge this if statement with the enclosing one.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "898ab7e6-f464-44da-9706-dd68d2ece768",
+      "rule": "csharpsquid:S3330",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml.cs",
+      "line": 94,
+      "message": "Set the 'HttpOnly' flag on this cookie.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ccceb29b-61e1-4cd5-b755-d49b40226547",
+      "rule": "csharpsquid:S2092",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Index.cshtml.cs",
+      "line": 94,
+      "message": "Set the 'Secure' flag on this cookie.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "0f8ac453-af36-4845-9334-95b9f5725a41",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Success.cshtml",
+      "line": 9,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "9379c582-7f40-4476-8c24-45645483526d",
+      "rule": "csharpsquid:S1186",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Basket/Success.cshtml.cs",
+      "line": 9,
+      "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3212cf25-7d11-4f3b-8c44-90eded99068d",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Index.cshtml",
+      "line": 8,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d7d6c082-68c7-4469-a20d-aac4aa3ae9ee",
+      "rule": "Web:S6853",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Index.cshtml",
+      "line": 14,
+      "message": "A form label must be associated with a control and have accessible text.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "aef64ede-4b5b-4524-9484-1ac544b7a548",
+      "rule": "Web:S6853",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Index.cshtml",
+      "line": 17,
+      "message": "A form label must be associated with a control and have accessible text.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "53a4625e-82f1-46f0-a3e5-d75608aa65b5",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Index.cshtml",
+      "line": 20,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "84e1ca73-f86b-412b-85ba-449501c20069",
+      "rule": "csharpsquid:S1186",
+      "severity": "CRITICAL",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Privacy.cshtml.cs",
+      "line": 7,
+      "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "70aee64e-ec21-4b54-9458-718cc8af3155",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Shared/Components/BasketComponent/Basket.cs",
+      "line": 35,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "c49f633a-6eb8-4bb8-821c-1dc29b1023ed",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Shared/Components/BasketComponent/Default.cshtml",
+      "line": 8,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "35c95419-02c8-4870-b23d-d71f40dc2e58",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Shared/_editCatalog.cshtml",
+      "line": 5,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1b8c03ba-5ce0-487d-a65f-cdf265767082",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Pages/Shared/_product.cshtml",
+      "line": 4,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b2f9926c-b389-4393-ac19-db3fbef76b06",
+      "rule": "external_roslyn:CA2263",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/Program.cs",
+      "line": 100,
+      "message": "Preferir la sobrecarga genérica \"Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue<T>(Microsoft.Extensions.Configuration.IConfiguration, string)\" en lugar de \"Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue(Microsoft.Extensions.Configuration.IConfiguration, System.Type, string)\"",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "f0bf95ed-b87e-4e4e-9d53-1deb6240bb1d",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Program.cs",
+      "line": 128,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "01108efc-f817-4d9b-982d-d6a18fc3d7be",
+      "rule": "csharpsquid:S6966",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Program.cs",
+      "line": 132,
+      "message": "Await RunAsync instead.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "188ff2d4-9313-466c-8b43-b68901a8a183",
+      "rule": "csharpsquid:S3236",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Services/CatalogItemViewModelService.cs",
+      "line": 22,
+      "message": "Remove this argument from the method call; it hides the caller information.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e69dc556-ecba-48a5-9bd2-b1e8e911053a",
+      "rule": "external_roslyn:SYSLIB1045",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:src/Web/SlugifyParameterTransformer.cs",
+      "line": 14,
+      "message": "Use 'GeneratedRegexAttribute' para generar la implementación de expresiones regulares en tiempo de compilación.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "fdad3618-d047-4f4c-baab-0c44d7de9f4d",
+      "rule": "csharpsquid:S6444",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/SlugifyParameterTransformer.cs",
+      "line": 14,
+      "message": "Pass a timeout to limit the execution time.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "6371eae5-bbe5-47ed-9c36-33afd3df5da8",
+      "rule": "csharpsquid:S101",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/ViewModels/Account/LoginWith2faViewModel.cs",
+      "line": 5,
+      "message": "Rename class 'LoginWith2faViewModel' to match pascal case naming rules, consider using 'LoginWith2FaViewModel'.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "1fd8bcf0-ac81-47e6-b14b-1e922a9dc69d",
+      "rule": "csharpsquid:S6964",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/ViewModels/Manage/IndexViewModel.cs",
+      "line": 9,
+      "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "394658ad-4043-4a5b-a684-8b64ea100e32",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/ViewModels/OrderItemViewModel.cs",
+      "line": 8,
+      "message": "Make 'Discount' a static property.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "5e2e81d6-8d61-4705-97c8-e6b4f6ade7fe",
+      "rule": "csharpsquid:S2325",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/ViewModels/OrderViewModel.cs",
+      "line": 12,
+      "message": "Make 'Status' a static property.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ac4fb440-1a5e-4569-95ea-1fc3ccfac29c",
+      "rule": "Web:LinksIdenticalTextsDifferentTargetsCheck",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Manage/EnableAuthenticator.cshtml",
+      "line": 18,
+      "message": "Use distinct texts or point to the same target for this link and the one at line 15.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "15010c6b-3f91-44b0-9e4c-adfbf59619be",
+      "rule": "Web:LinksIdenticalTextsDifferentTargetsCheck",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Manage/EnableAuthenticator.cshtml",
+      "line": 19,
+      "message": "Use distinct texts or point to the same target for this link and the one at line 16.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "dd8a208d-22d9-4352-ab76-cea71293dfa6",
+      "rule": "Web:S5256",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Manage/ExternalLogins.cshtml",
+      "line": 10,
+      "message": "Add \"<th>\" headers to this \"<table>\".",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "7840c8e5-f1ca-4407-95d8-c3711a907387",
+      "rule": "csharpsquid:S6966",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Manage/_Layout.cshtml",
+      "line": 20,
+      "message": "Await RenderSectionAsync instead.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d389d066-bdbb-485f-8a14-4f425a263031",
+      "rule": "csharpsquid:S4143",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Order/Detail.cshtml",
+      "line": 6,
+      "message": "Verify this is the index/key that was intended; a value has already been set for it.",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3cf266aa-55a2-4104-be9e-5d0834c34496",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Order/Detail.cshtml",
+      "line": 55,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "5b674fb1-76be-45d1-9c9c-5700c10037c9",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/Components/Basket/Default.cshtml",
+      "line": 9,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d58ca614-fa8a-43e0-a70c-79a9e1ca73f8",
+      "rule": "Web:S5254",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_Layout.cshtml",
+      "line": 2,
+      "message": "Add \"lang\" and/or \"xml:lang\" attributes to the \"<html>\" or \"<body>\" element",
+      "type": "BUG",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "cf5f46ef-0a7a-41a0-98df-087b19e62a44",
+      "rule": "Web:S5725",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_Layout.cshtml",
+      "line": 62,
+      "message": "Add integrity and crossorigin=\"anonymous\" attributes to this element to enforce integrity checks.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "6f00e57e-f67d-4039-9d39-77a2885d79eb",
+      "rule": "csharpsquid:S6966",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_Layout.cshtml",
+      "line": 68,
+      "message": "Await RenderSectionAsync instead.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "13f051c3-d043-4ca5-ba09-707540326365",
+      "rule": "csharpsquid:S8970",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_LoginPartial.cshtml",
+      "line": 1,
+      "message": "Remove this null-forgiving operator; nullable warnings are disabled here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "6c4e71f4-76e2-4373-ab25-ee5e147e4381",
+      "rule": "csharpsquid:S8970",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_LoginPartial.cshtml",
+      "line": 1,
+      "message": "Remove this null-forgiving operator; nullable warnings are disabled here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d8adbee0-c857-428e-b1be-ee0808c4b0b5",
+      "rule": "csharpsquid:S8970",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_LoginPartial.cshtml",
+      "line": 1,
+      "message": "Remove this null-forgiving operator; nullable warnings are disabled here.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "d8cec019-7943-45cc-8824-eeb37ece4105",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_LoginPartial.cshtml",
+      "line": 8,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "8c316600-6555-4cb1-abb3-41ebee5ead49",
+      "rule": "Web:ImgWithoutAltCheck",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/Web/Views/Shared/_LoginPartial.cshtml",
+      "line": 31,
+      "message": "Provide alternative text for this element.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "070f9ec7-78a6-4d14-8eca-d55264854bdb",
+      "rule": "secrets:S6703",
+      "severity": "BLOCKER",
+      "component": "eshop-pr7-refactoring:src/Web/appsettings.Docker.json",
+      "line": 3,
+      "message": "Make sure this database password gets changed and removed from the code.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "04bb9e16-eed5-48a0-bce3-20b3c8bff90a",
+      "rule": "secrets:S6703",
+      "severity": "BLOCKER",
+      "component": "eshop-pr7-refactoring:src/Web/appsettings.Docker.json",
+      "line": 4,
+      "message": "Make sure this database password gets changed and removed from the code.",
+      "type": "VULNERABILITY",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "547d0145-f817-4524-9942-c47d5b41aee5",
+      "rule": "css:S7924",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/wwwroot/css/basket/basket-status/basket-status.component.css",
+      "line": 16,
+      "message": "Text does not meet the minimal contrast requirement with its background.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "58dc6994-f4f5-42d5-b63f-38a396a3af25",
+      "rule": "css:S7924",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/wwwroot/css/basket/basket-status/basket-status.component.css",
+      "line": 29,
+      "message": "Text does not meet the minimal contrast requirement with its background.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "0c47a5bd-d7b1-486c-a089-af85884230d0",
+      "rule": "css:S7924",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/wwwroot/css/basket/basket.component.css",
+      "line": 37,
+      "message": "Text does not meet the minimal contrast requirement with its background.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a25f593b-38ba-42ca-9feb-02a7ec2a9c5d",
+      "rule": "css:S7924",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/wwwroot/css/catalog/catalog.component.css",
+      "line": 57,
+      "message": "Text does not meet the minimal contrast requirement with its background.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e9eae3c6-eee5-45ef-abb0-1d399559d00a",
+      "rule": "css:S7924",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/Web/wwwroot/css/catalog/catalog.component.css",
+      "line": 89,
+      "message": "Text does not meet the minimal contrast requirement with its background.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "eef3b84b-c2fb-48d0-ab5b-3ffce9c4701a",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/eShopWeb.AspireServiceDefaults/Extensions.cs",
+      "line": 35,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "2ae094ad-c342-4f37-982b-eacba6e04bc3",
+      "rule": "csharpsquid:S3241",
+      "severity": "MINOR",
+      "component": "eshop-pr7-refactoring:src/eShopWeb.AspireServiceDefaults/Extensions.cs",
+      "line": 77,
+      "message": "Change return type to 'void'; not a single caller uses the returned value.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "fec72f5f-80f9-4991-b542-6b8d7768f96d",
+      "rule": "csharpsquid:S125",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:src/eShopWeb.AspireServiceDefaults/Extensions.cs",
+      "line": 89,
+      "message": "Remove this commented out code.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "aa018d45-15db-4e51-99f6-d6da646e36fb",
+      "rule": "external_roslyn:CA1067",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Extensions/TestChild.cs",
+      "line": 7,
+      "message": "El tipo Microsoft.eShopWeb.UnitTests.ApplicationCore.Extensions.TestChild debe reemplazar a Equals porque implementa IEquatable<T>.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a362f2ad-e827-4730-a681-50c6bc91ca82",
+      "rule": "external_roslyn:CA1067",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Extensions/TestParent.cs",
+      "line": 5,
+      "message": "El tipo Microsoft.eShopWeb.UnitTests.ApplicationCore.Extensions.TestParent debe reemplazar a Equals porque implementa IEquatable<T>.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a589a62f-b82a-454b-b18b-51d16be47d31",
+      "rule": "external_roslyn:CS8602",
+      "severity": "MAJOR",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Services/BasketServiceTests/TransferBasket.cs",
+      "line": 100,
+      "message": "Desreferencia de una referencia posiblemente NULL.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "e8b4b345-e0dc-41ef-8431-8edc7842c941",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Specifications/CatalogFilterPaginatedSpecification.cs",
+      "line": 30,
+      "message": "El miembro \"GetTestCollection\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "a72738cd-43f1-4e8b-b5d6-49b3eed6adf7",
+      "rule": "external_roslyn:CA1829",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Specifications/CatalogFilterSpecification.cs",
+      "line": 22,
+      "message": "Use la propiedad \"Count\" en lugar de Enumerable.Count().",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "4a819d5e-49ac-47be-8300-306f2ec00b7d",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Specifications/CatalogFilterSpecification.cs",
+      "line": 25,
+      "message": "El miembro \"GetTestItemCollection\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b4b1e9f8-5a96-4bd9-9af5-fdf511f359f5",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/ApplicationCore/Specifications/CatalogItemsSpecification.cs",
+      "line": 33,
+      "message": "El miembro \"GetTestCollection\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "b27afc98-53e3-4ca2-b1b3-680b06c9fabe",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/AddressBuilder.cs",
+      "line": 8,
+      "message": "El miembro \"TestStreet\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3eb5a822-3159-45e7-b6a8-39db92bb315a",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/AddressBuilder.cs",
+      "line": 9,
+      "message": "El miembro \"TestCity\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3eeb41ef-9138-43df-95b5-6ad88f953f8b",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/AddressBuilder.cs",
+      "line": 10,
+      "message": "El miembro \"TestState\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "261d421a-b505-446e-b5c5-a8ea42ea3efe",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/AddressBuilder.cs",
+      "line": 11,
+      "message": "El miembro \"TestCountry\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "59bef060-6cf5-44ab-9dc1-8aba4dc991f5",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/AddressBuilder.cs",
+      "line": 12,
+      "message": "El miembro \"TestZipCode\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "519b46c3-7ce7-4f64-8fea-56f8a92764dc",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/BasketBuilder.cs",
+      "line": 9,
+      "message": "El miembro \"BasketBuyerId\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "543f1f2c-5354-49f6-ba65-e5a1adfd4340",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/BasketBuilder.cs",
+      "line": 11,
+      "message": "El miembro \"BasketId\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "3f407313-e9f3-4bfe-a6c1-615bbc152a27",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/OrderBuilder.cs",
+      "line": 8,
+      "message": "El miembro \"TestBuyerId\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "770f9252-5cd9-40fc-9ac3-629ae15c6c36",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/OrderBuilder.cs",
+      "line": 9,
+      "message": "El miembro \"TestCatalogItemId\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "ed6f4efb-07a6-43ea-97ae-a5b72f7748cb",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/OrderBuilder.cs",
+      "line": 10,
+      "message": "El miembro \"TestProductName\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    },
+    {
+      "key": "72490049-6f93-4e7f-8036-c5d637183c08",
+      "rule": "external_roslyn:CA1822",
+      "severity": "INFO",
+      "component": "eshop-pr7-refactoring:tests/UnitTests/Builders/OrderBuilder.cs",
+      "line": 11,
+      "message": "El miembro \"TestPictureUri\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+      "type": "CODE_SMELL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "status": "OPEN"
+    }
+  ]
+}

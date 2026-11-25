@@ -270,3 +270,7 @@ runtime.properties
 
 __pycache__/
 *.pyc
+
+# Análisis locales de refactoring
+.sonarqube/
+.pr07-results/
