@@ -25,7 +25,11 @@ pipeline {
     }
     stages {
         stage('Checkout GitHub') {
-            steps { checkout scm }
+            steps {
+                // Keep Windows long-path support scoped to this checkout.
+                powershell 'git init; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git config core.longpaths true; exit $LASTEXITCODE'
+                checkout scm
+            }
         }
         stage('Preparar herramientas') {
             steps { powershell './ci/pr07.ps1 -Stage Prepare' }
