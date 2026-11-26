@@ -1,0 +1,23 @@
+﻿{
+    "id":  "3d222f8a-c8b2-4d1f-9d6c-8711ffdbfdc8",
+    "type":  "REPORT",
+    "componentId":  "aaa563bc-d3b0-4135-803a-d89d305a7e31",
+    "componentKey":  "eshop-pr7-refactoring",
+    "componentName":  "eShopOnWeb - Practica 07 Refactoring",
+    "componentQualifier":  "TRK",
+    "analysisId":  "5637645f-28e3-48ce-a7e3-aa094678670e",
+    "status":  "SUCCESS",
+    "submittedAt":  "2026-11-26T00:53:02-0500",
+    "submitterLogin":  "admin",
+    "startedAt":  "2026-11-26T00:53:03-0500",
+    "executedAt":  "2026-11-26T00:53:18-0500",
+    "executionTimeMs":  14764,
+    "hasScannerContext":  true,
+    "warningCount":  1,
+    "warnings":  [
+                     "There are problems with file encoding in the source code. Please check the scanner logs for more details."
+                 ],
+    "infoMessages":  [
+
+                     ]
+}

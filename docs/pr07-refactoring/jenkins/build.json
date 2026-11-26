@@ -1,0 +1,54 @@
+{
+  "number": 3,
+  "result": "SUCCESS",
+  "duration": 228993,
+  "timestamp": 1795672179030,
+  "url": "http://localhost:8080/job/Pr07-eShopOnWeb-Refactoring/3/",
+  "artifacts": [
+    {
+      "displayPath": "61b6d986-a365-47a2-9ce8-6b792a1f914d/coverage.opencover.xml",
+      "fileName": "coverage.opencover.xml",
+      "relativePath": "ci-results/3/61b6d986-a365-47a2-9ce8-6b792a1f914d/coverage.opencover.xml"
+    },
+    {
+      "displayPath": "analysis.json",
+      "fileName": "analysis.json",
+      "relativePath": "ci-results/3/analysis.json"
+    },
+    {
+      "displayPath": "commit.txt",
+      "fileName": "commit.txt",
+      "relativePath": "ci-results/3/commit.txt"
+    },
+    {
+      "displayPath": "SEBASTIAN/coverage.opencover.xml",
+      "fileName": "coverage.opencover.xml",
+      "relativePath": "ci-results/3/ginod_SEBASTIAN_2026-11-26_00_52_20/In/SEBASTIAN/coverage.opencover.xml"
+    },
+    {
+      "displayPath": "junit.xml",
+      "fileName": "junit.xml",
+      "relativePath": "ci-results/3/junit.xml"
+    },
+    {
+      "displayPath": "quality-gate.json",
+      "fileName": "quality-gate.json",
+      "relativePath": "ci-results/3/quality-gate.json"
+    },
+    {
+      "displayPath": "sonar-report.html",
+      "fileName": "sonar-report.html",
+      "relativePath": "ci-results/3/sonar-report.html"
+    },
+    {
+      "displayPath": "sonar-report.json",
+      "fileName": "sonar-report.json",
+      "relativePath": "ci-results/3/sonar-report.json"
+    },
+    {
+      "displayPath": "unit-tests.trx",
+      "fileName": "unit-tests.trx",
+      "relativePath": "ci-results/3/unit-tests.trx"
+    }
+  ]
+}

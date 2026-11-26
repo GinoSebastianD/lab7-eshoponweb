@@ -41,3 +41,26 @@ dotnet sonarscanner end /d:sonar.token=$env:SONAR_TOKEN
 `pruebas/` conserva resultados TRX. `sonar/` contiene métricas, incidencias, metadatos del análisis y OpenCover comprimido. `evidencias/` contiene capturas reales y una vista HTML generada desde TRX. Los archivos originales de ejecución pueden incluir rutas locales del equipo de pruebas.
 
 El alcance es el grafo de proyectos de UnitTests/Web más PublicApi, con el mismo perfil antes y después. Las pruebas funcionales y de rendimiento anteriores no se mezclaron con las unitarias de esta práctica. No se realizó una nueva prueba completa de navegador. Las asignaciones son responsabilidades de seguimiento, no atribuciones de autoría de commits a terceros.
+
+## Integración con Jenkins
+
+Nuestro equipo ejecutó el refactoring desde Jenkins 2.568.3: **build #3 SUCCESS**, 57/57 pruebas aprobadas y Quality Gate **OK**. Commit analizado: `a6d41a649ede9c9dd205d33d07b416bcf23220a9`. Las páginas de comparación antes/después conservan el análisis local previo; la última página documenta esta ejecución independiente de CI.
+
+- [Jenkinsfile del repositorio](../../Jenkinsfile)
+- [Script de compilación, pruebas y reporte](../../ci/pr07.ps1)
+- [Reporte Sonar generado por Jenkins](jenkins/sonar-report.html) (descargar para abrir en el navegador)
+- [Métricas y análisis en JSON](jenkins/sonar-report.json)
+- [Resultado de Jenkins](jenkins/build.json), [etapas](jenkins/stages.json) y [pruebas](jenkins/tests.json)
+- [Consola de la ejecución](jenkins/console.txt), [TRX](jenkins/unit-tests.trx), [JUnit](jenkins/junit.xml) y [cobertura](jenkins/coverage.opencover.zip)
+
+Para reproducirlo en un agente Windows:
+
+1. Disponer de .NET SDK 10.0.403, Java 21, Git y SonarScanner for .NET 12.1.0. Registrar Java en Jenkins como `JAVA21`.
+2. Registrar el token del proyecto Sonar como credencial de texto secreto `pr07-sonarqube-token`. El token no forma parte del repositorio.
+3. Crear un Pipeline desde SCM: este repositorio, rama `*/development` y archivo `Jenkinsfile`.
+4. Ejecutar **Build with Parameters**: `DOTNET_HOME` y `SCANNER_HOME` son las carpetas de las herramientas; `SONAR_URL` identifica el servidor. El proyecto Sonar usado es `eshop-pr7-refactoring`.
+5. Revisar las seis etapas, el resultado de pruebas y los artefactos archivados. La ejecución falla si fallan las pruebas, el análisis o la puerta de calidad.
+
+La configuración de Git admite rutas largas solo en este checkout. Nuestro servidor Jenkins se inició sin variables `GIT_CONFIG_*` heredadas del entorno de automatización. La instancia de Jenkins se mantiene en `http://localhost:8080/job/Pr07-eShopOnWeb-Refactoring/` y SonarQube en `http://localhost:9000`; ambos requieren servicios locales activos. No se han expuesto a Internet. Las primeras dos ejecuciones documentaron problemas de entorno y checkout; el resultado archivado corresponde a la ejecución completa que los resolvió.
+
+Referencia: [pruebas y artefactos en Jenkins](https://www.jenkins.io/doc/pipeline/tour/tests-and-artifacts/).

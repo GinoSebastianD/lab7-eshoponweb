@@ -1,0 +1,47 @@
+﻿{
+    "job":  "Pr07-eShopOnWeb-Refactoring",
+    "build":  "3",
+    "buildUrl":  "http://localhost:8080/job/Pr07-eShopOnWeb-Refactoring/3/",
+    "revision":  "a6d41a649ede9c9dd205d33d07b416bcf23220a9",
+    "project":  "eshop-pr7-refactoring",
+    "analysisId":  "5637645f-28e3-48ce-a7e3-aa094678670e",
+    "analysisStatus":  "SUCCESS",
+    "qualityGate":  "OK",
+    "executedAt":  "2026-11-26T00:53:18-0500",
+    "measures":  [
+                     {
+                         "metric":  "coverage",
+                         "value":  "7.6",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "bugs",
+                         "value":  "11",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "code_smells",
+                         "value":  "229",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "duplicated_lines_density",
+                         "value":  "3.8",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "cognitive_complexity",
+                         "value":  "447",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "ncloc",
+                         "value":  "10990"
+                     },
+                     {
+                         "metric":  "vulnerabilities",
+                         "value":  "26",
+                         "bestValue":  false
+                     }
+                 ]
+}
