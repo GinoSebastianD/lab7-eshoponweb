@@ -274,3 +274,5 @@ __pycache__/
 # Análisis locales de refactoring
 .sonarqube/
 .pr07-results/
+ci-results/
+.dotnet-home/
